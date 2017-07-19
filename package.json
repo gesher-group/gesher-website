@@ -1,0 +1,20 @@
+{
+  "name": "gesher-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gesher-group/gesher-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gesher-group/gesher-website/issues"
+  },
+  "homepage": "https://github.com/gesher-group/gesher-website#readme",
+  "devDependencies": {
+    "now": "^7.1.1",
+    "standard": "^10.0.2"
+  }
+}
