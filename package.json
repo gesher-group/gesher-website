@@ -10,7 +10,8 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "build": "bundle exec jekyll serve",
+    "build": "bundle exec jekyll build",
+    "serve": "bundle exec jekyll serve",
     "test": "standard jest"
   },
   "bugs": {
@@ -18,7 +19,6 @@
   },
   "homepage": "https://github.com/gesher-group/gesher-website#readme",
   "devDependencies": {
-    "now": "^7.1.1",
     "standard": "^10.0.2"
   }
 }
