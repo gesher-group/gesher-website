@@ -11,7 +11,8 @@
   "license": "ISC",
   "scripts": {
     "build": "bundle exec jekyll build --watch",
-    "serve": "bundle exec jekyll serve",
+    "serve": "bundle exec jekyll serve --watch",
+    "dev": "bundle exec jekyll serve --force_polling",
     "test": "standard jest"
   },
   "bugs": {
