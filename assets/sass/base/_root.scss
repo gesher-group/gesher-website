@@ -1,8 +1,9 @@
-/**
- * Set up a decent box model on the root element
- */
+@import 'vars';
+
 html {
   box-sizing: border-box;
+  background: $blue;
+  color: $white;
 }
 
 /**
@@ -13,4 +14,4 @@ html {
  */
 *, ::before, ::after {
   box-sizing: inherit;
-} 
+}
