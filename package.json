@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "build": "bundle exec jekyll build",
+    "build": "bundle exec jekyll build --watch",
     "serve": "bundle exec jekyll serve",
     "test": "standard jest"
   },
