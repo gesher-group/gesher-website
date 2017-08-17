@@ -18,7 +18,14 @@ body {
 }
 
 header {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
   background: $blue;
+
+  img {
+    height: 3em;
+  }
 
   h1 {
     font-size: 2em;
@@ -64,6 +71,15 @@ footer {
   img {
     max-height: 1em;
   }
+}
+
+a.button {
+  padding: 1em 2em;
+  color: $black;
+  border-radius: 2px;
+  background: $white;
+  text-decoration: none;
+  margin-right: 2em;
 }
 
 /**
