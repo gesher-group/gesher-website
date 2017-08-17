@@ -21,7 +21,10 @@ header {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   background: $blue;
+  padding: 0 25%;
 
   img {
     height: 3em;
