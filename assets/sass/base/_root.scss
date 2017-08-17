@@ -80,6 +80,23 @@ a.button {
   background: $white;
   text-decoration: none;
   margin-right: 2em;
+  @include box-shadow(0.125em, 0, 1em, 0, rgba($black, 0.08));
+  @include translate3d(0, 0, 0);
+  @include ease(0.2s);
+
+  display: inline-block;
+
+  &:hover {
+    @include box-shadow(0.225em, 0, 1.2em, 0, rgba($black, 0.08));
+    @include translate3d(0, -0.1em, 0);
+    background: $white2;
+
+    &:active {
+      @include ease(0.1s);
+      @include translate3d(0, 0.1em, 0);
+      background: $white2;
+    }
+  }
 }
 
 /**
