@@ -1,4 +1,5 @@
 @import 'vars';
+@import 'mixins';
 
 html, body {
   font: $base-font;
@@ -6,18 +7,19 @@ html, body {
   background: $black;
   color: $white;
 
-  min-height: 100%;
+  min-height: 100vh;
 }
 
 body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1.5em solid $blue;
-  height: calc(100vh - 2em);
+  height: 100%;
 }
 
 header {
+  background: $blue;
+
   h1 {
     font-size: 2em;
     line-height: 1.25em;
@@ -32,9 +34,15 @@ footer {
   align-items: center;
 
   color: $white;
-  background: $blue;
-  padding-top: 1.5em;
+  background: $black;
+  padding: 1.5em 0;
   width: 100%;
+  opacity: 0.5;
+  @include ease(0.2s);
+
+  &:hover {
+    opacity: 1;
+  }
 
   a, a:visited {
     color: $white;
