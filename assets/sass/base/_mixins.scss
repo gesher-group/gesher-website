@@ -5,3 +5,15 @@
   -moz-transition: all $ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
   transition: all $ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
 }
+
+@mixin box-shadow($top, $left, $blur, $spread, $color) {
+  -webkit-box-shadow: $top $left $blur $spread $color;
+  -moz-box-shadow: $top $left $blur $spread $color;
+  box-shadow: $top $left $blur $spread $color;
+}
+
+@mixin translate3d($x, $y, $z) {
+  -webkit-transform: translate3d($x, $y, $z);
+  -moz-transform: translate3d($x, $y, $z);
+  transform: translate3d($x, $y, $z);
+}
