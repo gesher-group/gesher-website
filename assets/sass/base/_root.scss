@@ -17,6 +17,18 @@ body {
   height: 100%;
 }
 
+h1 {
+  font-size: 2em;
+  line-height: 1.25em;
+  font-weight: 400;
+}
+
+h2 {
+  font-weight: 400;
+  line-height: 1.25em;
+  font-size: 1.5em;
+}
+
 header {
   display: flex;
   flex-grow: 1;
@@ -28,12 +40,6 @@ header {
 
   img {
     height: 3em;
-  }
-
-  h1 {
-    font-size: 2em;
-    line-height: 1.25em;
-    font-weight: 400;
   }
 }
 
@@ -149,6 +155,31 @@ section {
         border: none;
         transition: all 200ms ease-in;
       }
+    }
+  }
+}
+
+section.faq {
+  background: $blue2;
+  padding: 2em 10%;
+
+  .column-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .questions-column {
+    max-width: 32em;
+    &:first-of-type {
+      margin-right: 8em;
+    }
+  }
+
+  .question p {
+    &:last-of-type {
+      opacity: 0.75;
     }
   }
 }
