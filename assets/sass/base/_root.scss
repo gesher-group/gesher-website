@@ -187,6 +187,17 @@ section.faq {
 section.value-prop {
   padding-bottom:3em;
   padding-top:3em;
+  header {
+    font-size: 48px;
+    line-height: normal;
+    padding-top:2.5em;
+    padding-bottom:1.5em;
+    padding-left: 3em;
+    padding-right: 3em;
+    background:$black;
+    justify-content: center;
+    text-align: left;
+  }
   .left {
     height: 250px;
     width:48.5%;
@@ -196,6 +207,8 @@ section.value-prop {
       text-align: left;
     }
     p {
+      font-size: 25px;
+      line-height: normal;
       text-align: left;
     }
   }
@@ -209,6 +222,8 @@ section.value-prop {
       text-align: right;
     }
     p {
+      font-size: 25px;
+      line-height: normal;
       text-align: right;
     }
   }
