@@ -122,7 +122,7 @@ section {
   }
 
   .timestamp {
-    width: 300px;
+    width: auto;
     margin-top: 20px;
     padding: 0px 40px;
     display: flex;
@@ -180,6 +180,86 @@ section.faq {
   .question p {
     &:last-of-type {
       opacity: 0.75;
+    }
+  }
+}
+
+section.value-prop {
+  padding-bottom:3em;
+  padding-top:3em;
+  header {
+    font-size: 48px;
+    line-height: normal;
+    padding-top:2.5em;
+    padding-bottom:1.5em;
+    padding-left: 3em;
+    padding-right: 3em;
+    background:$black;
+    justify-content: center;
+    text-align: left;
+  }
+  .left {
+    height: 250px;
+    width:48.5%;
+    float:left;
+    background: $blue;
+    padding:2.5em;
+    h2 {
+      text-align: left;
+    }
+    p {
+      font-size: 25px;
+      line-height: normal;
+      text-align: left;
+    }
+  }
+  .right {
+    height:250px;
+    width: 48.5%;
+    float:right;
+    background: $blue;
+    margin-bottom: auto;
+    padding:2.5em;
+    h2 {
+      text-align: right;
+    }
+    p {
+      font-size: 25px;
+      line-height: normal;
+      text-align: right;
+    }
+  }
+  .space {
+    // margin-left:auto;
+    // margin-right: auto;
+    margin:auto;
+    margin-top: 75px;
+    // border-radius:25px;
+    background: $white;
+    height: 100px;
+    width: 3%;
+    position: absolute;
+    left:48.5%;
+    // top:50%;
+    &:after {
+      // border-radius:25px;
+      background: $white;
+      content: "";
+      height: 45%;
+      left: -29px;
+      position: absolute;
+      top: 29px;
+      width: 100%;
+    }
+    &:before {
+      // border-radius:25px;
+      background: $white;
+      content: "";
+      height: 45%;
+      right: -29px;
+      position: absolute;
+      top: 29px;
+      width: 100%;
     }
   }
 }
