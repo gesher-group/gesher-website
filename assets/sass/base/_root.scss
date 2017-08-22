@@ -230,19 +230,14 @@ section.value-prop {
     }
   }
   .space {
-    // margin-left:auto;
-    // margin-right: auto;
     margin:auto;
     margin-top: 75px;
-    // border-radius:25px;
     background: $white;
     height: 100px;
     width: 3%;
     position: absolute;
     left:48.5%;
-    // top:50%;
     &:after {
-      // border-radius:25px;
       background: $white;
       content: "";
       height: 45%;
@@ -252,7 +247,6 @@ section.value-prop {
       width: 100%;
     }
     &:before {
-      // border-radius:25px;
       background: $white;
       content: "";
       height: 45%;
