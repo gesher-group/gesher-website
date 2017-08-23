@@ -113,7 +113,8 @@ section.timeline {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: inherit;
+  padding-top:3em;
+  padding-bottom: 5em;
   li {
     transition: all 200ms ease-in;
   }
@@ -152,6 +153,17 @@ section.timeline {
         transition: all 200ms ease-in;
       }
     }
+  }
+  #circle {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    position: relative;
+    top: -20px;
+    left:-1250px;
   }
 }
 
