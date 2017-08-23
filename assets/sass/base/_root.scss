@@ -108,19 +108,15 @@ a.button {
   }
 }
 
-section {
-
-  .timeline {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: inherit;
-  }
-  .li {
+section.timeline {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: inherit;
+  li {
     transition: all 200ms ease-in;
   }
-
   .timestamp {
     width: auto;
     margin-top: 20px;
@@ -134,20 +130,20 @@ section {
     position: relative;
     transition: all 200ms ease-in;
   }
-    .event {
-      padding-top: 20px;
-      font-weight: 600;
-      &:before {
-        content: '';
-        height: 25px;
-        border-left: 1px rgba($white, 0.25) solid;
-        position: absolute;
-        top: -15px;
-        left: 50%;
-        transition: all 200ms ease-in;
-      }
+  .event {
+    padding-top: 20px;
+    font-weight: 600;
+    &:before {
+      content: '';
+      height: 25px;
+      border-left: 1px rgba($white, 0.25) solid;
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transition: all 200ms ease-in;
     }
-  .li.complete {
+  }
+  .complete {
     .timestamp {
       border-top: 2px solid #66DC71;
       &:before {
