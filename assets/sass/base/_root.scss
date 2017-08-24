@@ -201,12 +201,13 @@ section.timeline {
 
 section.cta {
   background: $blue;
-  padding: 2em 10%;
+  padding: 4em 10%;
+  h1 {
+    margin: 0;
+  }
 
-  .email-team t {
-    &:last-of-type {
-      opacity: 0.75;
-    }
+  i a, i a:visited {
+    color: $white;
   }
 }
 
@@ -226,14 +227,21 @@ section.faq {
     &:first-of-type {
       margin-right: 8em;
     }
-  }
-
-  .question p {
-    &:last-of-type {
-      opacity: 0.75;
+    .question {
+      margin-bottom: 2em;
+      p {
+        margin: 0;
+        &:last-of-type { opacity: 0.75; }
+        &:first-of-type { margin-bottom: 0.5em; }
+      }
     }
   }
+
+  a, a:visited {
+    color: $white;
+  }
 }
+
 
 section.value-prop {
   padding-bottom:3em;
