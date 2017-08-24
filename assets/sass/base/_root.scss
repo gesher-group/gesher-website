@@ -329,8 +329,7 @@ section.value-prop {
 }
 
 @media (max-width: 800px) {
-  h1 { font-size: 1.5em; }
-  h2 { font-size: 1.2em; }
+  h1, h2, h3 { font-size: 1.5em; }
 
   header {
     display: flex;
@@ -359,5 +358,12 @@ section.value-prop {
   section.faq {
     .column-wrapper { flex-direction: column; }
     .questions-column:first-of-type { margin-right: 0; }
+  }
+
+  section.cta {
+    .button2 {
+      margin-top: 2em;
+      margin-bottom: 1em;
+    }
   }
 }
