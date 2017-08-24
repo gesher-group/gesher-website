@@ -242,19 +242,10 @@ section.faq {
   }
 }
 
-@media (max-width: 800px) {
-  section.faq {
-    .column-wrapper {
-      flex-direction: column;
-    }
-    .questions-column:first-of-type {margin-right: 0;}
-  }
-}
-
-
 section.value-prop {
   padding-bottom:3em;
   padding-top:3em;
+
   header {
     font-size: 48px;
     line-height: normal;
@@ -266,6 +257,7 @@ section.value-prop {
     justify-content: center;
     text-align: left;
   }
+
   .left {
     height: 250px;
     width:48.5%;
@@ -334,4 +326,14 @@ section.value-prop {
  */
 *, ::before, ::after {
   box-sizing: inherit;
+}
+
+@media (max-width: 800px) {
+  h1 { font-size: 1.5em; }
+  h2 { font-size: 1.2em; }
+
+  section.faq {
+    .column-wrapper { flex-direction: column; }
+    .questions-column:first-of-type { margin-right: 0; }
+  }
 }
