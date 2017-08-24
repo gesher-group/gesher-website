@@ -266,6 +266,42 @@ section.value-prop {
   }
 }
 
+section.testimonials {
+  div {
+    width: 50%;
+    height: 200px;
+    float: left;
+    text-align: left;
+    justify-content: center;
+    padding:5em;
+  }
+
+  div:nth-of-type(1) {
+  }
+
+  div:nth-of-type(2) {
+    position: relative;
+  }
+
+  div:nth-of-type(3) {
+    position: absolute;
+    top: 850px;
+    left: 150px;
+  }
+
+  div:nth-of-type(4) {
+  }
+
+  .box {
+    width: 30%;
+    height: 150px;
+    background: white;
+    left: 150px;
+    justify-content: center;
+    text-align: left;
+  }
+}
+
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
  * Since `*` has a specificity of 0, it does not override the `html` value
