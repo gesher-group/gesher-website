@@ -140,18 +140,15 @@ a.button2 {
   }
 }
 
-section {
+section.timeline {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top:3em;
+  padding-bottom: 5em;
 
-  .timeline {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: inherit;
-  }
-  .li {
-    transition: all 200ms ease-in;
-  }
+  li { transition: all 200ms ease-in; }
 
   .timestamp {
     width: auto;
@@ -166,20 +163,20 @@ section {
     position: relative;
     transition: all 200ms ease-in;
   }
-    .event {
-      padding-top: 20px;
-      font-weight: 600;
-      &:before {
-        content: '';
-        height: 25px;
-        border-left: 1px rgba($white, 0.25) solid;
-        position: absolute;
-        top: -15px;
-        left: 50%;
-        transition: all 200ms ease-in;
-      }
+  .event {
+    padding-top: 20px;
+    font-weight: 600;
+    &:before {
+      content: '';
+      height: 25px;
+      border-left: 1px rgba($white, 0.25) solid;
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transition: all 200ms ease-in;
     }
-  .li.complete {
+  }
+  .complete {
     .timestamp {
       border-top: 2px solid #66DC71;
       &:before {
@@ -188,6 +185,17 @@ section {
         transition: all 200ms ease-in;
       }
     }
+  }
+  #circle {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    position: relative;
+    top: -20px;
+    left:-1250px;
   }
 }
 
@@ -273,19 +281,14 @@ section.value-prop {
     }
   }
   .space {
-    // margin-left:auto;
-    // margin-right: auto;
     margin:auto;
     margin-top: 75px;
-    // border-radius:25px;
     background: $white;
     height: 100px;
     width: 3%;
     position: absolute;
     left:48.5%;
-    // top:50%;
     &:after {
-      // border-radius:25px;
       background: $white;
       content: "";
       height: 45%;
@@ -295,7 +298,6 @@ section.value-prop {
       width: 100%;
     }
     &:before {
-      // border-radius:25px;
       background: $white;
       content: "";
       height: 45%;
