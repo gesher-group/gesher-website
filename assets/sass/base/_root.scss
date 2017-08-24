@@ -242,6 +242,15 @@ section.faq {
   }
 }
 
+@media (max-width: 800px) {
+  section.faq {
+    .column-wrapper {
+      flex-direction: column;
+    }
+    .questions-column:first-of-type {margin-right: 0;}
+  }
+}
+
 
 section.value-prop {
   padding-bottom:3em;
