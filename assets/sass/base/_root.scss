@@ -31,8 +31,16 @@ h2 {
 
 h3 {
   font-weight: 400;
-  line-height: 1.25em;
-  font-size: 2.5em;
+  line-height: 1.5em;
+  font-size: 1.5em;
+}
+
+h4 {
+  font-weight: 400;
+  line-height: 1em;
+  font-size: 1em;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
 }
 
 header {
@@ -89,7 +97,7 @@ footer {
 }
 
 a.button {
-  padding: 1em 2em;
+  padding: 1em 6em;
   color: $black;
   border-radius: 2px;
   background: $white;
@@ -114,30 +122,13 @@ a.button {
   }
 }
 
-a.button {
-  padding: 1em 6em;
-  color: $black;
-  border-radius: 2px;
-  background: $white;
-  text-decoration: none;
-  margin-right: 2em;
-  @include box-shadow(0.125em, 0, 1em, 0, rgba($black, 0.08));
-  @include translate3d(0, 0, 0);
-  @include ease(0.2s);
-
-  display: inline-block;
-
-  &:hover {
-    @include box-shadow(0.225em, 0, 1.2em, 0, rgba($black, 0.08));
-    @include translate3d(0, -0.1em, 0);
-    background: $white2;
-
-    &:active {
-      @include ease(0.1s);
-      @include translate3d(0, 0.1em, 0);
-      background: $white2;
-    }
-  }
+section.header {
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4em 10%;
 }
 
 section.timeline {
@@ -239,79 +230,21 @@ section.faq {
 }
 
 section.value-prop {
-  padding-bottom:100px;
-  padding-top:3em;
+  padding-bottom: 3em;
+  padding-top: 3em;
 
-  header {
-    font-size: 48px;
-    line-height: normal;
-    padding-top:2.5em;
-    padding-bottom:1.5em;
-    padding-left: 3em;
-    padding-right: 3em;
-    background:$black;
-    justify-content: center;
-    text-align: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .left, .right {
+    padding: 2em 10%;
+    background: $blue;
+    @include box-shadow(0.225em, 0, 1.2em, 0, rgba($black, 0.08));
   }
 
-  .left {
-    height: 250px;
-    width:48.5%;
-    float:left;
-    background: $blue;
-    padding:2.5em;
-    h2 {
-      text-align: left;
-    }
-    p {
-      font-size: 25px;
-      line-height: normal;
-      text-align: left;
-    }
-  }
-  .right {
-    height:250px;
-    width: 48.5%;
-    float:right;
-    background: $blue;
-    margin-bottom: auto;
-    padding:2.5em;
-    h2 {
-      text-align: right;
-    }
-    p {
-      font-size: 25px;
-      line-height: normal;
-      text-align: right;
-    }
-  }
-  .space {
-    margin:auto;
-    margin-top: 75px;
-    background: $white;
-    height: 100px;
-    width: 3%;
-    position: absolute;
-    left:48.5%;
-    &:after {
-      background: $white;
-      content: '';
-      height: 45%;
-      left: -29px;
-      position: absolute;
-      top: 29px;
-      width: 100%;
-    }
-    &:before {
-      background: $white;
-      content: '';
-      height: 45%;
-      right: -29px;
-      position: absolute;
-      top: 29px;
-      width: 100%;
-    }
-  }
+  .left { margin-right: 2em; }
+  .right { text-align: right; }
 }
 
 section.testimonials {
