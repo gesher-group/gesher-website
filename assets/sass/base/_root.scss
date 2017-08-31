@@ -516,4 +516,46 @@ section#application {
       margin: 0;
     }
   }
+
+  section.testimonials {
+    display:none;
+  }
+
+  section.timeline {
+    padding-bottom: 3em;
+    padding-top: 3em;
+    padding-left: 2em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: unset;
+    .timestamp {
+      border-top: unset;
+      margin-top:unset;
+      border-left: 2px solid #D6DCE0;
+      align-items: left;
+      .event {
+        &:before {
+          border-left:unset;
+          width:25px;
+          border-top: 1px rgba($white, 0.25) solid;
+          position: absolute;
+          top:50%;
+          left: -4%;
+        }
+      }
+    }
+    #circle {display:none;}
+    #circleM {
+      content: '';
+      width: 20px;
+      height: 20px;
+      background-color: white;
+      border-radius: 20px;
+      border: 1px solid #ddd;
+      position: relative;
+      top:0px;
+      left:-8px;
+    }
+  }
 }
