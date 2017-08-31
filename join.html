@@ -148,6 +148,7 @@ layout: default
 <section id='application' class='hidden'>
   <div class='paper'>
     <form
+      data-persist='garlic'
       id='application_form'
       method='POST'
       action='https://script.google.com/macros/s/AKfycbzfrS2LLdbUiA4ZX6ptHTANb3qrE73qXmeL8YXaXnjBMZzD7cQ/exec'>
@@ -168,15 +169,16 @@ layout: default
 
       <hr />
 
-      <a class='button blue'>
+      <button class='button blue'>
         Review responses
-      </a>
+      </button>
     </form>
   </div>
 </section>
 
 <!-- NOTE: Put any scripts you need below this -->
 <script src='{{ site.url }}/assets/js/timeline.js' type='text/javascript'></script>
+<script data-cfasync='false' src='{{ site.url }}/assets/js/form-submission-handler.js'></script>
 <script src='{{ site.url }}/assets/js/garlic.min.js'></script>
 <script type='text/javascript></script'>
   function launchApplicationModal () {
