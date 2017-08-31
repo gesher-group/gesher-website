@@ -127,9 +127,12 @@ a.button {
   text-decoration: none;
   margin-right: 2em;
   padding: 1em 2em;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
   @include box-shadow(0.125em, 0, 1em, 0, rgba($black, 0.08));
   @include translate3d(0, 0, 0);
   @include ease(0.2s);
+  cursor: pointer;
 
   &:hover {
     @include box-shadow(0.225em, 0, 1.2em, 0, rgba($black, 0.08));
@@ -140,6 +143,16 @@ a.button {
       @include ease(0.1s);
       @include translate3d(0, 0.1em, 0);
       background: $white2;
+    }
+  }
+
+  &.blue {
+    background: $blue;
+    color: $white;
+
+    &:hover,
+    &:active {
+      background: darken($blue, 2);
     }
   }
 }
@@ -330,6 +343,73 @@ section.testimonials {
     left: 150px;
   }
   padding-bottom: 400px;
+}
+
+section#application {
+  z-index: 1000;
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
+  background: rgba($black, 0.95);
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+
+  padding: 10vh 0;
+
+  .paper {
+    padding: 6em;
+    max-width: 56em;
+    min-width: 24em;
+    @include box-shadow(0.125em, 0, 1em, 0, rgba(#000000, 0.08));
+    box-sizing: border-box;
+    background: $white;
+    color: $black;
+    border-radius: 0.125em;
+
+    p {
+      color: rgba($black, 0.75);
+    }
+
+    textarea {
+      width: 100%;
+      padding: 1em;
+      font: $base-font;
+      margin-bottom: 2em;
+      border: 1px solid rgba($black, 0.1);
+      border-radius: 0.125em;
+      overflow: auto;
+      outline: none;
+      resize: none;
+
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+
+      &:focus {
+        border-color: rgba($black, 0.25);
+      }
+    }
+
+    hr {
+      height: 1px;
+      width: 100%;
+      border: none;
+      background: rgba($black, 0.1);
+      margin-bottom: 2em;
+      margin-top: 1em;
+    }
+
+    > * {
+      max-width: 32em;
+    }
+  }
+
+  &.hidden {}
 }
 
 /**
