@@ -119,7 +119,7 @@ nav {
   }
 }
 
-a.button {
+.button {
   color: $black;
   background: $white;
   border-radius: 2px;
@@ -127,9 +127,12 @@ a.button {
   text-decoration: none;
   margin-right: 2em;
   padding: 1em 2em;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
   @include box-shadow(0.125em, 0, 1em, 0, rgba($black, 0.08));
   @include translate3d(0, 0, 0);
   @include ease(0.2s);
+  cursor: pointer;
 
   &:hover {
     @include box-shadow(0.225em, 0, 1.2em, 0, rgba($black, 0.08));
@@ -140,6 +143,16 @@ a.button {
       @include ease(0.1s);
       @include translate3d(0, 0.1em, 0);
       background: $white2;
+    }
+  }
+
+  &.blue {
+    background: $blue;
+    color: $white;
+
+    &:hover,
+    &:active {
+      background: darken($blue, 2);
     }
   }
 }
@@ -332,6 +345,77 @@ section.testimonials {
   padding-bottom: 400px;
 }
 
+section#application {
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
+  background: rgba($black, 0.95);
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  @include ease(256ms);
+
+  padding: 10vh 0;
+
+  .paper {
+    padding: 6em;
+    max-width: 56em;
+    min-width: 24em;
+    @include box-shadow(0.125em, 0, 1em, 0, rgba(#000000, 0.08));
+    box-sizing: border-box;
+    background: $white;
+    color: $black;
+    border-radius: 0.125em;
+
+    p {
+      color: rgba($black, 0.75);
+    }
+
+    textarea {
+      width: 100%;
+      padding: 1em;
+      font: $base-font;
+      margin-bottom: 2em;
+      border: 1px solid rgba($black, 0.1);
+      border-radius: 0.125em;
+      overflow: auto;
+      outline: none;
+      resize: none;
+
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+
+      &:focus {
+        border-color: rgba($black, 0.25);
+      }
+    }
+
+    hr {
+      height: 1px;
+      width: 100%;
+      border: none;
+      background: rgba($black, 0.1);
+      margin-bottom: 2em;
+      margin-top: 1em;
+    }
+
+    > * {
+      max-width: 32em;
+    }
+  }
+
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
  * Since `*` has a specificity of 0, it does not override the `html` value
@@ -375,7 +459,6 @@ section.testimonials {
     }
   }
 }
-
 
 @media (max-width: 800px) {
   h1, h2, h3 { font-size: 1.5em; }
@@ -425,45 +508,12 @@ section.testimonials {
     }
   }
 
-  section.testimonials {
-    display: none;
-  }
+  section#application {
+    padding: 0;
 
-  section.timeline {
-    padding-bottom: 3em;
-    padding-top: 3em;
-    padding-left: 2em;
-
-    display: flex;
-    flex-direction: column;
-    align-items: unset;
-    .timestamp {
-      border-top: unset;
-      margin-top:unset;
-      border-left: 2px solid #D6DCE0;
-      align-items: left;
-      .event {
-        &:before {
-          border-left:unset;
-          width:25px;
-          border-top: 1px rgba($white, 0.25) solid;
-          position: absolute;
-          top:50%;
-          left: -4%;
-        }
-      }
-    }
-    #circle {display:none;}
-    #circleM {
-      content: '';
-      width: 20px;
-      height: 20px;
-      background-color: white;
-      border-radius: 20px;
-      border: 1px solid #ddd;
-      position: relative;
-      top:0px;
-      left:-8px;
+    .paper {
+      padding: 2em 1em;
+      margin: 0;
     }
   }
 }
