@@ -358,6 +358,7 @@ section#application {
   justify-content: flex-start;
   align-items: center;
   display: flex;
+  @include ease(256ms);
 
   padding: 10vh 0;
 
@@ -409,7 +410,10 @@ section#application {
     }
   }
 
-  &.hidden {}
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
 /**

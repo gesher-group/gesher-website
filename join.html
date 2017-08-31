@@ -89,7 +89,11 @@ layout: default
 
 <section class='cta'>
   <h1>Take a step towards a stronger, healthier career and lifelong business connections.</h1>
-  <a class ='button' href='{{ site.url }}/join.html'>Apply to join</a>
+  <a
+    class='button'
+    onClick='document.getElementById(`application`).className = ``'>
+    Apply to join
+  </a>
   <i>
     Have a question?
     <a href='#' id='memberMailto'>Email a member.</a>
@@ -170,6 +174,7 @@ layout: default
 
 <!-- NOTE: Put any scripts you need below this -->
 <script src='{{ site.url }}/assets/js/timeline.js' type='text/javascript'></script>
+<script src='{{ site.url }}/assets/js/garlic.min.js'></script>
 <script type='text/javascript></script'>
   function launchApplicationModal () {
 
