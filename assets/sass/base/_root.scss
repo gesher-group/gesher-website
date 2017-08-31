@@ -347,7 +347,7 @@ section.testimonials {
 
 section#application {
   z-index: 1000;
-  width: 100vw;
+  width: 100%;
   height: 100%;
   position: fixed;
   top: 0;
@@ -456,7 +456,6 @@ section#application {
   }
 }
 
-
 @media (max-width: 800px) {
   h1, h2, h3 { font-size: 1.5em; }
 
@@ -502,6 +501,15 @@ section#application {
       margin-top: 2em;
       margin-bottom: 1em;
       display: table;
+    }
+  }
+
+  section#application {
+    padding: 0;
+
+    .paper {
+      padding: 2em 1em;
+      margin: 0;
     }
   }
 }
