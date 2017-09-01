@@ -1,17 +1,11 @@
 
-function validEmail(email) { // see:
-  return true
-  // var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i
-  // return re.test(email)
+function validEmail (email) {
+  var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i
+  return re.test(email)
 }
 
 function validateHuman (honeypot) {
-  if (honeypot) {  //if hidden form filled up
-    console.log('Robot Detected!')
-    return true
-  } else {
-    console.log('Welcome Human!')
-  }
+  if (honeypot) return true
 }
 
 // get all data in form and return object
@@ -20,76 +14,62 @@ function getFormData () {
   var fields = Object.keys(elements).map(function (k) {
     if (elements[k].name !== undefined) {
       return elements[k].name
-    // special case for Edge's html collection
-    }else if (elements[k].length > 0) {
+    } else if (elements[k].length > 0) {
       return elements[k].item(0).name
     }
-  }).filter(function(item, pos, self) {
-    return self.indexOf(item) == pos && item
+  }).filter((item, pos, self) => {
+    return self.indexOf(item) === pos && item
   })
+
   var data = {}
-  fields.forEach(function (k) {
+  fields.forEach((k) => {
     data[k] = elements[k].value
-    var str = '' // declare empty string outside of loop to allow
-                  // it to be appended to for each item in the loop
-    if (elements[k].type === 'checkbox') { // special case for Edge's html collection
-      str = str + elements[k].checked + ', ' // take the string and append
-                                              // the current checked value to
-                                              // the end of it, along with
-                                              // a comma and a space
-      data[k] = str.slice(0, -2) // remove the last comma and space
-                                  // from the  string to make the output
-                                  // prettier in the spreadsheet
+    var str = ''
+    if (elements[k].type === 'checkbox') {
+      str = str + elements[k].checked + ', '
+      data[k] = str.slice(0, -2)
     } else if (elements[k].length) {
-      for(var i = 0; i < elements[k].length; i++) {
+      for (var i = 0; i < elements[k].length; i++) {
         if (elements[k].item(i).checked) {
-          str = str + elements[k].item(i).value + ', ' // same as above
+          str = str + elements[k].item(i).value + ', '
           data[k] = str.slice(0, -2)
         }
       }
     }
   })
-  console.log(data)
+
   return data
 }
 
-function handleFormSubmit(event) {  // handles form submit withtout any jquery
-  event.preventDefault()           // we are submitting via xhr below
-  var data = getFormData()         // get the values submitted in the form
+function handleFormSubmit (event) {
+  event.preventDefault()
+  var data = getFormData()
 
-  /* OPTION: Remove this comment to enable SPAM prevention, see README.md
-  if (validateHuman(data.honeypot)) {  //if form is filled, form will not be submitted
+  if (validateHuman(data.honeypot)) {
     return false
   }
-  */
 
-  if (!validEmail(data.email)) {   // if email is not valid show error
-    document.getElementById('email-invalid').style.display = 'block'
-    return false
-  } else {
-    var url = event.target.action  //
-    var xhr = new XMLHttpRequest()
-    xhr.open('POST', url)
-    // xhr.withCredentials = true
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
-    xhr.onreadystatechange = function () {
-    console.log(xhr.status, xhr.statusText)
-    console.log(xhr.responseText)
-    document.getElementById('application_form').style.display = 'none' // hide form
-    document.getElementById('thankyou_message').style.display = 'block'
-        return
-    }
-    // url encode form data for sending as post data
-    var encoded = Object.keys(data).map(function (k) {
-        return encodeURIComponent(k) + '=' + encodeURIComponent(data[k])
-    }).join('&')
-    xhr.send(encoded)
+  var url = event.target.action
+  var xhr = new XMLHttpRequest()
+  xhr.open('POST', url)
+
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+  xhr.onreadystatechange = () => {
+    // document.getElementById('application_form').style.display = 'none'
+    // set a success message
+    return
   }
+
+  var encoded = Object.keys(data).map((k) => {
+    return encodeURIComponent(k) + '=' + encodeURIComponent(data[k])
+  }).join('&')
+
+  xhr.send(encoded)
 }
-function loaded() {
-  console.log('contact form submission handler loaded successfully')
-  // bind to the submit event of our form
+
+function loaded () {
   var form = document.getElementById('application_form')
   form.addEventListener('submit', handleFormSubmit, false)
 }
+
 document.addEventListener('DOMContentLoaded', loaded, false)

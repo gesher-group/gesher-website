@@ -185,13 +185,12 @@ section.timeline {
     border-top: 2px solid #D6DCE0;
     flex-direction: column;
     align-items: center;
-    font-weight: 100;
     position: relative;
     transition: all 200ms ease-in;
   }
   .event {
     padding-top: 20px;
-    font-weight: 600;
+
     &:before {
       content: '';
       height: 25px;
@@ -211,17 +210,6 @@ section.timeline {
         transition: all 200ms ease-in;
       }
     }
-  }
-  #circle {
-    content: '';
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    border-radius: 20px;
-    border: 1px solid #ddd;
-    position: relative;
-    top: -20px;
-    left:-1250px;
   }
 }
 
