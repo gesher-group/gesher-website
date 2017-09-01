@@ -99,7 +99,7 @@ nav {
   color: $white;
   background: $black;
   padding: 1.5em 0;
-  width: 100%;
+  width: calc(100% - 1em);
   @include ease(0.2s);
   img { max-height: 1em; }
 
