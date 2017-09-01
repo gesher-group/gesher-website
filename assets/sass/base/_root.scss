@@ -290,8 +290,11 @@ section.value-prop {
     }
   }
 
-  .left { margin-right: 4em; }
-  .right { text-align: right; }
+  .left, .right {
+    text-align: center;
+  }
+
+  .left { margin-right: 4em;  }
 }
 
 section.testimonials {
