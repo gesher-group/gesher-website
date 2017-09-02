@@ -167,49 +167,33 @@ section.header {
 }
 
 section.timeline {
-  list-style-type: none;
+  padding: 3em;
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  padding-top:3em;
-  padding-bottom: 5em;
-
-  li { transition: all 200ms ease-in; }
-
   .timestamp {
-    width: auto;
-    margin-top: 20px;
-    padding: 0px 40px;
+    padding: 0px 30px;
     display: flex;
     justify-content: center;
     border-top: 2px solid #D6DCE0;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    transition: all 200ms ease-in;
+  }
+  .marker {
+    height: 15px;
+    border-left: 1px rgba($white, 0.25) solid;
   }
   .event {
     padding-top: 20px;
-
-    &:before {
-      content: '';
-      height: 25px;
-      border-left: 1px rgba($white, 0.25) solid;
-      position: absolute;
-      top: -15px;
-      left: 50%;
-      transition: all 200ms ease-in;
-    }
   }
-  .complete {
-    .timestamp {
-      border-top: 2px solid #66DC71;
-      &:before {
-        background-color: #66DC71;
-        border: none;
-        transition: all 200ms ease-in;
-      }
-    }
+  #circle {
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    position: relative;
+    top: -6px;
   }
 }
 
@@ -286,6 +270,7 @@ section.value-prop {
 }
 
 section.testimonials {
+  display: none;
   div {
     width: 50%;
     height: 200px;
@@ -513,40 +498,22 @@ section#application {
   }
 
   section.timeline {
-    padding-bottom: 3em;
-    padding-top: 3em;
-    padding-left: 2em;
-
-    display: flex;
     flex-direction: column;
-    align-items: unset;
     .timestamp {
       border-top: unset;
-      margin-top:unset;
       border-left: 2px solid #D6DCE0;
       align-items: left;
-      .event {
-        &:before {
-          border-left:unset;
-          width:25px;
-          border-top: 1px rgba($white, 0.25) solid;
-          position: absolute;
-          top:50%;
-          left: -4%;
-        }
-      }
     }
-    #circle {display:none;}
-    #circleM {
-      content: '';
-      width: 20px;
-      height: 20px;
-      background-color: white;
-      border-radius: 20px;
-      border: 1px solid #ddd;
-      position: relative;
-      top:0px;
-      left:-8px;
+    .marker {
+      border-left:unset;
+      width: 15px;
+      border-top: 1px rgba($white, 0.25) solid;
+      position:absolute;
+      left: 50px;
+    }
+    #circle {
+      top:unset;
+      left:-6px;
     }
   }
 }
