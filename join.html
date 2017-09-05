@@ -144,6 +144,12 @@ layout: default
 <script src='{{ site.url }}/assets/js/timeline.js' type='text/javascript'></script>
 <script type='text/javascript></script'>
   function getRandomEmail () {
+    var emailsList = ['ddhollar@ucsc.edu', 'bdrury@ucsc.edu', 'kechang@ucsc.edu', 'lbacon@ucsc.edu', 'plodha@ucsc.edu', 'sasadler@ucsc.edu', 'jlupu@ucsc.edu'];
+    var randomEmail = function () {
+      var selectedEmail = emailsList[Math.floor(Math.random() * 7)];
+      return selectedEmail;
+    }
+    document.getElementById('memberMailto').setAttribute('href', selectedEmail);
     // get list of emails
     // maybe? format emails
     // randomly select an email
@@ -152,6 +158,6 @@ layout: default
     // docum
     //get the document id, assign href property
   }
-
   window.onLoad = getRandomEmail
 </script>
+<a id ='memberMailto'>Email a Member</a>
