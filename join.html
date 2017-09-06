@@ -196,8 +196,8 @@ layout: default
       <div>
         <h2>Upload your Resume here</h2> 
         <p>(Only PDF files please!)</p>
-        <input type="file" name="filesToUpload" id="filesToUpload" accept="application/pdf" >
-        <input type="button" value="Upload File" onclick="uploadFile()">
+        <input type='file' name='fileToUpload' id='fileToUpload' accept='application/pdf' />
+        <input type='button' value='Upload' onclick='start()'/>
       </div>
 
       <h2>Thank you for your application, we hope to talk to you shortly!</h2>
@@ -212,6 +212,8 @@ layout: default
 </section>
 
 <!-- NOTE: Put any scripts you need below this -->
+<script src='https://apis.google.com/js/api.js'></script>
+<script src='{{ site.url }}/assets/js/upload-file-handler.js'></script>
 <script src='{{ site.url }}/assets/js/timeline.js' type='text/javascript'></script>
 <script data-cfasync='false' src='{{ site.url }}/assets/js/form-submission-handler.js'></script>
 <script src='{{ site.url }}/assets/js/garlic.min.js'></script>
