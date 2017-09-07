@@ -21,23 +21,30 @@ layout: default
 </section>
 
 <section class='testimonials'>
-  <!-- TODO: testimonials -->
+  <h1>Gesher alumni have gone on to join outstanding companies like Tesla, Morgan Stanley, and Hulu</h1>
+
   <div>
-    <p>Gesher alumni have gone on to join outstanding companies like Tesla, Morgan Stanley, and Hulu</p>
+    <div class='testimonial'>
+      <h4>Joey Frelka</h4>
+      <h3>The reason I love Gesher Group is because it creates an environment full of like-minded individuals who are serious about developing their careers. <!-- Throughout my college experience I never found that it factor with any other groups until I found Gesher, which is why I felt like I wanted to play a pivotal role in helping to develop it by becoming the Director of Projects. Gesher has a lot to offer and one of the best factors about it is that the group has so much potential, and it's up you whether or not you want to take that step toward personal and professional development. --></h3>
+    </div>
+
+    <div class='photos'>
+      <img src='{{ site.url }}/assets/images/joeyfrelka.jpg' />
+      <div class='triangles'>
+        <div class='triangle'></div>
+        <div class='triangle'></div>
+      </div>
+      <img src='{{ site.url }}/assets/images/pranavlodha.jpg' />
+    </div>
+
+    <div class='testimonial'>
+      <h4>Pranav Lodha</h4>
+      <h3>My connections helped me get an internship my junior year which turned into my career.</h3>
+    </div>
   </div>
-  <div class='box'>
-    <img src='{{ site.url }}/assets/images/joeyfrelka.jpg' style='width:175px;height:175px;position:absolute;top:20%;left:85%' id='one' }} />
-    <h4>Joey Frelka</h4>
-    <p>The reason I love Gesher Group is because it creates an environment full of like-minded individuals who are serious about developing their careers. Throughout my college experience I never found that it factor with any other groups until I found Gesher, which is why I felt like I wanted to play a pivotal role in helping to develop it by becoming the Director of Projects. Gesher has a lot to offer and one of the best factors about it is that the group has so much potential, and it's up you whether or not you want to take that step toward personal and professional development.</p>
-  </div>
-  <div class='box'>
-    <img src='{{ site.url }}/assets/images/pranavlodha.jpg' style='width:175px;height:175px;position:absolute;bottom:15%;left:-30%' }} />
-    <h4>SIMON PELL'EGRIGIO</h4>
-    <p>My connections helped me get an internship my junior year which turned into my career.</p>
-  </div>
-  <div>
-    <p>Your experiences at Gesher Group will show hiring managers that you have skills beyond what you learned in class</p>
-  </div>
+
+  <h1>Your experiences at Gesher Group will show hiring managers that you have skills beyond what you learned in class</h1>
 </section>
 
 <section class='timeline'>
@@ -144,10 +151,10 @@ layout: default
       id='application_form'
       method='POST'
       action='https://script.google.com/macros/s/AKfycbzfrS2LLdbUiA4ZX6ptHTANb3qrE73qXmeL8YXaXnjBMZzD7cQ/exec'>
-      
+
       <h2>First Name</h2>
       <textarea name='First Name' placeholder='This is where you type'></textarea>
-      
+
       <h2>Last Name</h2>
       <textarea name='Last Name' placeholder='Enter answer here'></textarea>
 
@@ -194,7 +201,7 @@ layout: default
       <textarea name='Question 10' placeholder='Enter answer here'></textarea>
 
       <div>
-        <h2>Upload your Resume here</h2> 
+        <h2>Upload your Resume here</h2>
         <p>(Only PDF files please!)</p>
         <input type='file' name='fileToUpload' id='fileToUpload' accept='application/pdf' />
         <input type='button' value='Upload' onclick='start()'/>
