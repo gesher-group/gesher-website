@@ -274,64 +274,63 @@ section.testimonials {
 
   > div {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
     justify-content: space-between;
     position: relative;
-    background: $white;
 
-    .photos {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+    img {
+      width: 8vw;
+      height: 8vw;
       position: absolute;
-      top: 0;
-      left: 45vw;
-      background: $black;
-      height: 100%;
-
-      img {
-        width: 10vw;
-        height: 10vw;
-        position: relative;
-        z-index: 50;
-      }
-
-      .triangles {
-        position: relative;
-        z-index: 100;
-        .triangle {
-          content: '';
-          width: 0;
-          height: 0;
-          position: absolute;
-          border-top: 4vw solid $white;
-          border-right: 4vw solid transparent;
-
-          &:first-of-type {
-            left: 0;
-            bottom: 0;
-          }
-
-          &:last-of-type {
-            transform: rotate(180deg);
-            right: 0;
-            top: 0;
-          }
-        }
-      }
+      z-index: 50;
     }
 
     .testimonial {
       z-index: 1000;
       background: $white;
-      width: 45vw;
       padding: 1.5em 2em;
       padding-top: 3em;
       color: $black;
       box-sizing: border-box;
       position: relative;
       max-width: 32em;
+
+      &:first-of-type {
+        img {
+          left: 0;
+          bottom: -8vw;
+        }
+
+        &::after {
+          left: 0;
+          bottom: calc(-3vw + 1px);
+        }
+      }
+
+      &:last-of-type {
+        margin-top: 8vw;
+        align-self: flex-end;
+        img {
+          right: 0;
+          top: -8vw;
+        }
+
+        &::after {
+          transform: rotate(180deg);
+          right: 0;
+          top: calc(-3vw + 1px);
+        }
+      }
+
+      &::after {
+        content: '';
+        width: 0;
+        height: 0;
+        z-index: 100;
+        position: absolute;
+        border-top: 3vw solid $white;
+        border-right: 3vw solid transparent;
+      }
     }
   }
 }
@@ -509,7 +508,42 @@ section#application {
   }
 
   section.testimonials {
-    display:none;
+    > div {
+      img {
+        width: 30vw;
+        height: 30vw;
+        position: absolute;
+        z-index: 50;
+      }
+
+      .testimonial {
+        padding: 1.5em 2em;
+        padding-top: 3em;
+        width: 100%;
+        max-width: 100%;
+
+        &:last-of-type {
+          margin-top: 30vw;
+          img { top: -30vw; }
+          &::after { top: calc(-10vw + 1px); }
+        }
+
+        &:first-of-type {
+          img { bottom: -30vw; }
+          &::after { bottom: calc(-10vw + 1px); }
+        }
+
+        &::after {
+          content: '';
+          width: 0;
+          height: 0;
+          z-index: 100;
+          position: absolute;
+          border-top: 10vw solid $white;
+          border-right: 10vw solid transparent;
+        }
+      }
+    }
   }
 
   section.timeline {
