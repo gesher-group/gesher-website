@@ -3,24 +3,23 @@
 
 
 function start() {
-    var file = document.getElementById('fileToUpload');
-    // 2. Initialize the JavaScript client library.
-    gapi.client.init({
-      'apiKey': 'AIzaSyCmPTK8AgVwYld1lrCzoP_KOw9SH88mZ9U',
-      // clientId and scope are optional if auth is not required.
-    //   'clientId': 'YOUR_WEB_CLIENT_ID.apps.googleusercontent.com',
-    //   'scope': 'profile',
-    }).then(uploadFile((file, callback) {
-      // 3. Initialize and make the API request.
-      
-      })
-    }).then(function(response) {
-      console.log(response.result);
-    }, function(reason) {
-      console.log('Error: ' + reason.result.error.message);
-    });
-  };
-
+  // 2. Initialize the JavaScript client library.
+  gapi.client.init({
+    'apiKey': 'YOUR_API_KEY',
+    // clientId and scope are optional if auth is not required.
+    // 'clientId': 'YOUR_WEB_CLIENT_ID.apps.googleusercontent.com',
+    // 'scope': 'profile',
+  }).then(function() {
+    // 3. Initialize and make the API request.
+    return gapi.client.request({
+      'path': 'https://people.googleapis.com/v1/people/me?requestMask.includeField=person.names',
+    })
+  }).then(function(response) {
+    console.log(response.result);
+  }, function(reason) {
+    console.log('Error: ' + reason.result.error.message);
+  });
+};
   gapi.load('client', start);
 
 
@@ -57,7 +56,7 @@ function uploadFile(fileData, callback) {
           close_delim;
   
       var request = gapi.client.request({
-          'path': '/upload/drive/v2/files',
+          'path': '/https://www.googleapis.com/upload/drive/v2?uploadType=media',
           'method': 'POST',
           'params': {'uploadType': 'multipart'},
           'headers': {
