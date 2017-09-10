@@ -1,74 +1,55 @@
-// Documentation: https://developers.google.com/drive/v2/reference/files/insert#examples
-//                https://developers.google.com/drive/v2/web/manage-uploads#simple
+    var clientId = '88413899513-0iasph7kpnbaesv6dlutvvrg9uscfkho.apps.googleusercontent.com';
 
+  var apiKey = 'AIzaSyCmPTK8AgVwYld1lrCzoP_KOw9SH88mZ9U';
 
-function start() {
-  // 2. Initialize the JavaScript client library.
-  gapi.client.init({
-    'apiKey': 'YOUR_API_KEY',
-    // clientId and scope are optional if auth is not required.
-    // 'clientId': 'YOUR_WEB_CLIENT_ID.apps.googleusercontent.com',
-    // 'scope': 'profile',
-  }).then(function() {
-    // 3. Initialize and make the API request.
-    return gapi.client.request({
-      'path': 'https://people.googleapis.com/v1/people/me?requestMask.includeField=person.names',
-    })
-  }).then(function(response) {
-    console.log(response.result);
-  }, function(reason) {
-    console.log('Error: ' + reason.result.error.message);
-  });
-};
-  gapi.load('client', start);
+  var scopes = 'https://www.googleapis.com/auth/plus.me';
 
+  function handleClientLoad() {
+    // Step 2: Reference the API key
+    gapi.client.setApiKey(apiKey);
+    window.setTimeout(checkAuth,1);
+  }
 
-/**
- * Insert new file.
- *
- * @param {File} fileData File object to read data from.
- * @param {Function} callback Function to call when the request is complete.
- */
-function uploadFile(fileData, callback) {
-    const boundary = '-------314159265358979323846';
-    const delimiter = "\r\n--" + boundary + "\r\n";
-    const close_delim = "\r\n--" + boundary + "--";
-  
-    var reader = new FileReader();
-    reader.readAsBinaryString(fileData);
-    reader.onload = function(e) {
-      var contentType = fileData.type || 'application/octet-stream';
-      var metadata = {
-        'title': fileData.fileName,
-        'mimeType': contentType
-      };
-  
-      var base64Data = btoa(reader.result);
-      var multipartRequestBody =
-          delimiter +
-          'Content-Type: application/json\r\n\r\n' +
-          JSON.stringify(metadata) +
-          delimiter +
-          'Content-Type: ' + contentType + '\r\n' +
-          'Content-Transfer-Encoding: base64\r\n' +
-          '\r\n' +
-          base64Data +
-          close_delim;
-  
-      var request = gapi.client.request({
-          'path': '/https://www.googleapis.com/upload/drive/v2?uploadType=media',
-          'method': 'POST',
-          'params': {'uploadType': 'multipart'},
-          'headers': {
-            'Content-Type': 'multipart/mixed; boundary="' + boundary + '"'
-          },
-          'body': multipartRequestBody});
-      if (!callback) {
-        callback = function(file) {
-          console.log(file)
-        };
-      }
-      request.execute(callback);
+  function checkAuth() {
+    gapi.auth.authorize({client_id: clientId, scope: scopes, immediate: true}, handleAuthResult);
+  }
+
+  function handleAuthResult(authResult) {
+    var authorizeButton = document.getElementById('fileToUpload');
+    if (authResult && !authResult.error) {
+      authorizeButton.style.visibility = 'hidden';
+      makeApiCall();
+    } else {
+      authorizeButton.style.visibility = '';
+      authorizeButton.onclick = handleAuthClick;
     }
   }
-  
+
+  function handleAuthClick(event) {
+    // Step 3: get authorization to use private data
+    gapi.auth.authorize({client_id: clientId, scope: scopes, immediate: false}, handleAuthResult);
+    return false;
+  }
+
+  // Load the API and make an API call.  Display the results on the screen.
+  function makeApiCall() {
+    // Step 4: Load the Google+ API
+    gapi.client.load('plus', 'v1').then(function() {
+      // Step 5: Assemble the API request
+      var request = gapi.client.plus.people.get({
+        'userId': 'me'
+      });
+      // Step 6: Execute the API request
+      request.then(function(resp) {
+        var heading = document.createElement('h4');
+        var image = document.createElement('img');
+        image.src = resp.result.image.url;
+        heading.appendChild(image);
+        heading.appendChild(document.createTextNode(resp.result.displayName));
+
+        document.getElementById('content').appendChild(heading);
+      }, function(reason) {
+        console.log('Error: ' + reason.result.error.message);
+      });
+    });
+  }
