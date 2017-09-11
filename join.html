@@ -213,26 +213,16 @@ layout: default
 <!-- NOTE: Put any scripts you need below this -->
 <script src='https://apis.google.com/js/api.js'></script>
 <script src='{{ site.url }}/assets/js/upload-file-handler.js'></script>
-<script src='{{ site.url }}/assets/js/timeline.js' type='text/javascript'></script>
+<!-- <script src='{{ site.url }}/assets/js/timeline.js' type='text/javascript'></script> -->
 <script data-cfasync='false' src='{{ site.url }}/assets/js/form-submission-handler.js'></script>
 <script src='{{ site.url }}/assets/js/garlic.min.js'></script>
 <script type='text/javascript'>
   function getRandomEmail () {
-    var emailsList = ['ddhollar@ucsc.edu', 'bdrury@ucsc.edu', 'kechang@ucsc.edu', 'lbacon@ucsc.edu', 'plodha@ucsc.edu', 'sasadler@ucsc.edu', 'jlupu@ucsc.edu'];
-    var randomEmail = function () {
-      var selectedEmail = emailsList[Math.floor(Math.random() * 7)];
-      return selectedEmail;
-    }
-    document.getElementById('memberMailto').setAttribute('href', selectedEmail);
-    // get list of emails
-    // maybe? format emails
-    // randomly select an email
-    // return a mailto link
-    // set memberMailto href to that mailto link
-    // docum
-    // get the document id, assign href property
+    var emailsList = ['ddhollar@ucsc.edu', 'bdrury@ucsc.edu','plodha@ucsc.edu', 'lbacon@ucsc.edu',  'kechang@ucsc.edu', 'sasadler@ucsc.edu', 'jlupu@ucsc.edu'];
+    var selectedEmail = 'mailto:'+ emailsList[Math.floor(Math.random() * 7)];
+    document.getElementById('memberMailto').setAttribute('href',selectedEmail);
   }
-  
+
   window.onload = function () {
     getRandomEmail()
 
@@ -242,4 +232,3 @@ layout: default
     }
   }
 </script>
-<a id ='memberMailto'>Email a Member</a>
