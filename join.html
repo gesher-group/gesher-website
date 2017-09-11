@@ -21,74 +21,70 @@ layout: default
 </section>
 
 <section class='testimonials'>
-  <!-- TODO: testimonials -->
+  <h1>Gesher alumni have gone on to join outstanding companies like Tesla, Morgan Stanley, and Hulu</h1>
+
   <div>
-    <p>Gesher alumni have gone on to join outstanding companies like Tesla, Morgan Stanley, and Hulu</p>
+    <div class='testimonial'>
+      <img src='{{ site.url }}/assets/images/joeyfrelka.jpg' />
+      <h4>Joey Frelka</h4>
+      <h3>Gesher Group is a space for like-minded individuals who are actually serious about advancing their careers. Put in the effort, and you will reap the rewards.</h3>
+    </div>
+
+    <div class='testimonial'>
+      <img src='{{ site.url }}/assets/images/pranavlodha.jpg' />
+      <h4>Pranav Lodha</h4>
+      <h3>My connections helped me get an internship my junior year which turned into my career.</h3>
+    </div>
   </div>
-  <div class='box'>
-    <img src='{{ site.url }}/assets/images/pranavlodha.jpg' style='width:175px;height:175px;position:absolute;top:20%;left:85%' id='one' }} />
-    <h4>Wilson Gerolsteiner</h4>
-    <p>I learned all sorts of useful things at Gesher Group, like how to write this sentence</p>
-  </div>
-  <div class='box'>
-    <img src='{{ site.url }}/assets/images/pranavlodha.jpg' style='width:175px;height:175px;position:absolute;bottom:15%;left:-30%' }} />
-    <h4>SIMON PELL'EGRIGIO</h4>
-    <p>My connections helped me get an internship my junior year which turned into my career.</p>
-  </div>
-  <div>
-    <p>Your experiences at Gesher Group will show hiring managers that you have skills beyond what you learned in class</p>
-  </div>
+
+  <h1>Your experiences at Gesher Group will show hiring managers that you have skills beyond what you learned in class</h1>
 </section>
 
 <section class='timeline'>
-  <li>
-    <div class='timestamp'>
-      <span class='event'>Opers Fest</span>
-      <span class='date'>September 26<span>
-    </div>
-  </li>
-  <li>
-    <div class='timestamp'>
-      <span class='event'>Info Night</span>
-      <span class='date'>October 4<span>
-    </div>
-  </li>
-  <li>
-    <div class='timestamp'>
-      <span class='event'>Applications Due</span>
-      <span class='date'>October 8<span>
-    </div>
-  </li>
-  <li>
-    <div class='timestamp'>
-      <span class='event'>Interviews Begin</span>
-      <span class='date'>October 10<span>
-    </div>
-  </li>
-  <li>
-    <div class='timestamp'>
-      <span class='event'>Interviews End</span>
-      <span class='date'>October 13<span>
-    </div>
-  </li>
-  <li>
-    <div class='timestamp'>
-      <span class='event'>Decisions</span>
-      <span class='date'>October 15<span>
-    </div>
-  </li>
-  <li>
-    <div class='timestamp'>
-      <span class='event'>First Meeting</span>
-      <span class='date'>October 18<span>
-    </div>
-  </li>
-  <div id='circle'></div>
+  <div class='timestamp'>
+    <span class='marker'></span>
+    <span class='event'>Opers Fest</span>
+    <span class='date'>September 26<span>
+  </div>
+  <div class='timestamp'>
+    <span class='marker'></span>
+    <span class='event'>Info Night</span>
+    <span class='date'>October 4<span>
+  </div>
+  <div class='timestamp'>
+    <span class='marker'></span>
+    <span class='event'>Applications Due</span>
+    <span class='date'>October 8<span>
+  </div>
+  <div class='timestamp'>
+    <span class='marker'></span>
+    <span class='event'>Interviews Begin</span>
+    <span class='date'>October 10<span>
+  </div>
+  <div class='timestamp'>
+    <span class='marker'></span>
+    <span class='event'>Interviews End</span>
+    <span class='date'>October 13<span>
+  </div>
+  <div class='timestamp'>
+    <span class='marker'></span>
+    <span class='event'>Decisions</span>
+    <span class='date'>October 15<span>
+  </div>
+  <div class='timestamp'>
+    <span class='marker'></span>
+    <span class='event'>First Meeting</span>
+    <span class='date'>October 18<span>
+  </div>
 </section>
 
 <section class='cta'>
   <h1>Take a step towards a stronger, healthier career and lifelong business connections.</h1>
-  <a class ='button' href='{{ site.url }}/join.html'>Apply to join</a>
+  <a
+    class='button'
+    onClick='document.getElementById(`application`).className = ``'>
+    Apply to join
+  </a>
   <i>
     Have a question?
     <a href='#' id='memberMailto'>Email a member.</a>
@@ -140,9 +136,87 @@ layout: default
   </div>
 </section>
 
+<section id='application' class='hidden'>
+  <div class='paper'>
+    <form
+      data-persist='garlic'
+      id='application_form'
+      method='POST'
+      action='https://script.google.com/macros/s/AKfycbzfrS2LLdbUiA4ZX6ptHTANb3qrE73qXmeL8YXaXnjBMZzD7cQ/exec'>
+
+      <h2>First Name</h2>
+      <textarea name='First Name' placeholder='This is where you type'></textarea>
+
+      <h2>Last Name</h2>
+      <textarea name='Last Name' placeholder='Enter answer here'></textarea>
+
+      <h2>What year are you?</h2>
+      <p>Example: Sophomore.</p>
+      <textarea name='Year' placeholder='Enter answer here'></textarea>
+
+      <h2>What is your email address?</h2>
+      <textarea name='Email' placeholder='UCSC email address preferred'></textarea>
+
+      <h2>Describe in your own words how you came to be who you are today.</h2>
+      <p>This can include where you grew up, who/what has influenced you in your education or career choices, and what drives you to grow as a person and team member.</p>
+      <textarea name='Question 1' placeholder='Enter answer here'></textarea>
+
+      <h2>What field do you see yourself in when you graduate?</h2>
+      <p>This can be a short answer.</p>
+      <textarea name='Question 2' placeholder='Enter answer here'></textarea>
+
+      <h2>How do you see Gesher Group helping you towards it?</h2>
+      <textarea name='Question 3' placeholder='Enter answer here'></textarea>
+
+      <h2>How can you be an addition to Gesher Group?</h2>
+      <textarea name='Question 4' placeholder='Enter answer here'></textarea>
+
+      <h2>Describe a time when you've utilized your network to benefit yourself or an organization you've been apart of.</h2>
+      <p>This can be a short answer.</p>
+      <textarea name='Question 5' placeholder='Enter answer here'></textarea>
+
+      <h2>Who are you in a team setting?</h2>
+      <p>Example: Leader, Innovator, Do-er, Clutch, etc.</p>
+      <textarea name='Question 6' placeholder='Enter answer here'></textarea>
+
+      <h2> Give a scenario where you've fit into this role.</h2>
+      <textarea name='Question 7' placeholder='Enter answer here'></textarea>
+
+      <h2>How would you deal with a bad leader in a professional environment?</h2>
+      <textarea name='Question 8' placeholder='Enter answer here'></textarea>
+
+      <h2>What area of Gesher Group do you wish to focus on?</h2>
+      <p>(Sales, Bus Dev, Startups, Marketing, Engineering)</p>
+      <textarea name='Question 9' placeholder='Enter answer here'></textarea>
+
+      <h2>What is an achievement your most proud of?</h2>
+      <textarea name='Question 10' placeholder='Enter answer here'></textarea>
+
+      <div>
+        <h2>Upload your Resume here</h2>
+        <p>(Only PDF files please!)</p>
+        <input type='file' name='fileToUpload' id='fileToUpload' accept='application/pdf' />
+        <input type='button' value='Upload' onclick='start()'/>
+      </div>
+
+      <h2>Thank you for your application, we hope to talk to you shortly!</h2>
+
+      <hr />
+
+      <button class='button blue'>
+        Review responses
+      </button>
+    </form>
+  </div>
+</section>
+
 <!-- NOTE: Put any scripts you need below this -->
+<script src='https://apis.google.com/js/api.js'></script>
+<script src='{{ site.url }}/assets/js/upload-file-handler.js'></script>
 <script src='{{ site.url }}/assets/js/timeline.js' type='text/javascript'></script>
-<script type='text/javascript></script'>
+<script data-cfasync='false' src='{{ site.url }}/assets/js/form-submission-handler.js'></script>
+<script src='{{ site.url }}/assets/js/garlic.min.js'></script>
+<script type='text/javascript'>
   function getRandomEmail () {
     var emailsList = ['ddhollar@ucsc.edu', 'bdrury@ucsc.edu', 'kechang@ucsc.edu', 'lbacon@ucsc.edu', 'plodha@ucsc.edu', 'sasadler@ucsc.edu', 'jlupu@ucsc.edu'];
     var randomEmail = function () {
@@ -156,8 +230,16 @@ layout: default
     // return a mailto link
     // set memberMailto href to that mailto link
     // docum
-    //get the document id, assign href property
+    // get the document id, assign href property
   }
-  window.onLoad = getRandomEmail
+  
+  window.onload = function () {
+    getRandomEmail()
+
+    document.getElementById('application').onclick = (e) => {
+      if (e.target.id !== 'application') return
+      document.getElementById(`application`).className = 'hidden'
+    }
+  }
 </script>
 <a id ='memberMailto'>Email a Member</a>
