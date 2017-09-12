@@ -145,17 +145,16 @@ layout: default
       action='https://script.google.com/macros/s/AKfycbzfrS2LLdbUiA4ZX6ptHTANb3qrE73qXmeL8YXaXnjBMZzD7cQ/exec'>
 
       <h2>First Name</h2>
-      <textarea name='First Name' placeholder='This is where you type'></textarea>
+      <input name='First Name' type='name' placeholder='John' />
 
       <h2>Last Name</h2>
-      <textarea name='Last Name' placeholder='Enter answer here'></textarea>
+      <input name='Last Name' type='name' placeholder='Appleseed' />
 
       <h2>What year are you?</h2>
-      <p>Example: Sophomore.</p>
-      <textarea name='Year' placeholder='Enter answer here'></textarea>
+      <textarea name='Year' placeholder='First, second, third...'></textarea>
 
-      <h2>What is your email address?</h2>
-      <textarea name='Email' placeholder='UCSC email address preferred'></textarea>
+      <h2>What's your email?</h2>
+      <input name='Email' placeholder='UCSC email preferred' />
 
       <h2>Describe in your own words how you came to be who you are today.</h2>
       <p>This can include where you grew up, who/what has influenced you in your education or career choices, and what drives you to grow as a person and team member.</p>
@@ -179,32 +178,32 @@ layout: default
       <p>Example: Leader, Innovator, Do-er, Clutch, etc.</p>
       <textarea name='Question 6' placeholder='Enter answer here'></textarea>
 
-      <h2> Give a scenario where you've fit into this role.</h2>
+      <h2>Give a scenario where you've fit into this role.</h2>
       <textarea name='Question 7' placeholder='Enter answer here'></textarea>
 
       <h2>How would you deal with a bad leader in a professional environment?</h2>
       <textarea name='Question 8' placeholder='Enter answer here'></textarea>
 
       <h2>What area of Gesher Group do you wish to focus on?</h2>
-      <p>(Sales, Bus Dev, Startups, Marketing, Engineering)</p>
+      <p>Sales, business development, startups, marketing, engineering</p>
       <textarea name='Question 9' placeholder='Enter answer here'></textarea>
 
       <h2>What is an achievement your most proud of?</h2>
       <textarea name='Question 10' placeholder='Enter answer here'></textarea>
 
       <div>
-        <h2>Upload your Resume here</h2>
-        <p>(Only PDF files please!)</p>
+        <h2>Upload your resume</h2>
+        <p>Make sure your name is in the title, and it's free of errors.</p>
         <input type='file' name='fileToUpload' id='fileToUpload' accept='application/pdf' />
         <input type='button' value='Upload' onclick='start()'/>
       </div>
 
-      <h2>Thank you for your application, we hope to talk to you shortly!</h2>
+      <h3>Take a moment to double-check your responses, then submit below.</h3>
 
       <hr />
 
       <button class='button blue'>
-        Review responses
+        Submit application
       </button>
     </form>
   </div>
@@ -218,9 +217,9 @@ layout: default
 <script src='{{ site.url }}/assets/js/garlic.min.js'></script>
 <script type='text/javascript'>
   function getRandomEmail () {
-    var emailsList = ['ddhollar@ucsc.edu', 'bdrury@ucsc.edu','plodha@ucsc.edu', 'lbacon@ucsc.edu',  'kechang@ucsc.edu', 'sasadler@ucsc.edu', 'jlupu@ucsc.edu'];
-    var selectedEmail = 'mailto:'+ emailsList[Math.floor(Math.random() * 7)];
-    document.getElementById('memberMailto').setAttribute('href',selectedEmail);
+    var emailsList = ['ddhollar@ucsc.edu', 'bdrury@ucsc.edu', 'plodha@ucsc.edu', 'lbacon@ucsc.edu', 'kechang@ucsc.edu', 'sasadler@ucsc.edu', 'jlupu@ucsc.edu']
+    var selectedEmail = 'mailto:' + emailsList[Math.floor(Math.random() * 7)]
+    document.getElementById('memberMailto').setAttribute('href', selectedEmail)
   }
 
   window.onload = function () {

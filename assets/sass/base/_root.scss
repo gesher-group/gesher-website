@@ -370,9 +370,10 @@ section#application {
       color: rgba($black, 0.75);
     }
 
-    textarea {
+    textarea, input {
       width: 100%;
       padding: 1em;
+      z-index: 1;
       font: $base-font;
       margin-bottom: 2em;
       border: 1px solid rgba($black, 0.1);
@@ -506,8 +507,17 @@ section#application {
     padding: 0;
 
     .paper {
+      width: 100%;
       padding: 2em 1em;
+      justify-content: center;
       margin: 0;
+
+      form {
+        max-width: 32em;
+        width: 100%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+      }
     }
   }
 
