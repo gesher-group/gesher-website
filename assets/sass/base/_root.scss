@@ -170,7 +170,6 @@ section.header {
   justify-content: center;
   align-items: center;
   padding: 4em 10%;
-  padding-top: 10%;
 }
 
 section.timeline {
@@ -178,23 +177,32 @@ section.timeline {
   display: flex;
   flex-direction: row;
   justify-content: center;
+
   .timestamp {
     padding: 0 20px;
     display: flex;
     justify-content: center;
-    border-top: 2px solid #D6DCE0;
+    border-top: 1px solid rgba($white, 0.5);
     flex-direction: column;
     align-items: center;
     position:relative;
+    text-align: center;
   }
-  .marker {
-    height: 15px;
-    border-left: 1px rgba($white, 0.25) solid;
-    position:absolute;
-    top:0;
-  }
+
   .event {
-    padding-top: 20%;
+    padding-top: 1.5em;
+  }
+
+  .date {
+    color: rgba($white, 0.5);
+  }
+
+  .marker {
+    height: 0.5em;
+    border-left: 1px rgba($white, 0.25) solid;
+    position: absolute;
+    left: 50%;
+    top: 0;
   }
 }
 
@@ -483,7 +491,6 @@ section#application {
   }
 
   nav {
-    margin-left: 1em;
     > div { padding: 0 1em; }
   }
 
@@ -562,17 +569,19 @@ section#application {
 
   section.timeline {
     flex-direction: column;
+
     .timestamp {
-      border-top: unset;
-      border-left: 2px solid #D6DCE0;
       align-items: left;
+      border-top: unset;
+      border-left: 1px solid rgba($white, 0.75);
     }
+
     .marker {
       border-left:unset;
-      width: 15px;
+      width: 0.5em;
       border-top: 1px rgba($white, 0.25) solid;
-      left:0;
-      top:75%;
+      left: 0;
+      top: 75%;
     }
   }
 }
