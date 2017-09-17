@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/gesher-group/gesher-website#readme",
   "devDependencies": {
+    "live-server": "^1.2.0",
     "standard": "^10.0.2"
   }
 }
