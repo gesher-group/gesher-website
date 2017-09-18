@@ -137,77 +137,93 @@ layout: default
 </section>
 
 <section id='application' class='hidden'>
-  <div class='paper'>
-    <form
-      data-persist='garlic'
-      id='application_form'
-      method='POST'
-      action='https://script.google.com/macros/s/AKfycbzfrS2LLdbUiA4ZX6ptHTANb3qrE73qXmeL8YXaXnjBMZzD7cQ/exec'>
+    <div class='paper'>
+      <form
+        data-persist='garlic'
+        id='application_form'
+        method='POST'
+        action='https://script.google.com/macros/s/AKfycbwrXkSHvIchtSy6Ee1NKxThB39yTxYe8zxs7y1ugJSf-VAikMzF/exec'>
+        
+        <input type="hidden" value="" name="fileContent" id="fileContent">
+        <input type="hidden" value="" name="filename" id="filename">
 
-      <h2>First Name</h2>
-      <input name='First Name' type='name' placeholder='John' />
+        
+        <h2>First Name</h2>
+        <input name='FirstName' type='name' placeholder='John' />
+  
+        <h2>Last Name</h2>
+        <input name='LastName' type='name' placeholder='Appleseed' />
+  
+        <h2>What year are you?</h2>
+        <textarea name='Year' placeholder='First, second, third...'></textarea>
+  
+        <h2>What's your email?</h2>
+        <input name='Email' placeholder='UCSC email preferred' />
+  
+        <h2>Describe in your own words how you came to be who you are today.</h2>
+        <p>This can include where you grew up, who/what has influenced you in your education or career choices, and what drives you to grow as a person and team member.</p>
+        <textarea name='Question_1' placeholder='Enter answer here'></textarea>
+  
+        <h2>What field do you see yourself in when you graduate?</h2>
+        <p>This can be a short answer.</p>
+        <textarea name='Question_2' placeholder='Example: When I graduate I see myself working in the the Silicon Valley on a marketing team for such and such.'></textarea>
+  
+        <h2>How do you see Gesher Group helping you towards it?</h2>
+        <textarea name='Question_3' placeholder='We are here to help!'></textarea>
+  
+        <h2>How can you be an addition to Gesher Group?</h2>
+        <textarea name='Question_4' placeholder='How well do you work on a team?'></textarea>
+  
+        <h2>Describe a time when you've utilized your network to benefit yourself or an organization you've been apart of.</h2>
+        <p>This can be a short answer.</p>
+        <textarea name='Question_5' placeholder='My Great Uncle  owns a consultation group for Steve Jobs impersonators, ...'></textarea>
+  
+        <h2>Who are you in a team setting?</h2>
+        <p>Example: Leader, Innovator, Do-er, Clutch, etc.</p>
+        <textarea name='Question_6' placeholder='Explain why you fit this role?'></textarea>
+  
+        <h2>Give a scenario where you've fit into this role.</h2>
+        <textarea name='Question_7' placeholder='Describe in detail'></textarea>
+  
+        <h2>How would you deal with a bad leader in a professional environment?</h2>
+        <textarea name='Question_8' placeholder='Enter answer here'></textarea>
+  
+        <h2>What area of Gesher Group do you wish to focus on?</h2>
+        <p>Sales, business development, startups, marketing, engineering</p>
+        <textarea name='Question_9' placeholder='And why?'></textarea>
+  
+        <h2>What is an achievement your most proud of?</h2>
+        <textarea name='Question_10' placeholder='Anything goes!'></textarea>
+  
+        <div>
+          <h2>Upload your resume</h2>
+          <p>Make sure your name is in the title, and it's free of errors.</p>
+          <input type='file' name='fileToUpload' id='fileToUpload' accept='application/pdf' />
+          <input type='button' value='Upload' onclick='UploadFile()'/>
+        </div>
+  
+        <h3>Take a moment to double-check your responses, then submit below.</h3>
+        <hr />
+  
+        <button class='button blue'>
+          Submit application
+        </button>
+      </form>
 
-      <h2>Last Name</h2>
-      <input name='Last Name' type='name' placeholder='Appleseed' />
-
-      <h2>What year are you?</h2>
-      <textarea name='Year' placeholder='First, second, third...'></textarea>
-
-      <h2>What's your email?</h2>
-      <input name='Email' placeholder='UCSC email preferred' />
-
-      <h2>Describe in your own words how you came to be who you are today.</h2>
-      <p>This can include where you grew up, who/what has influenced you in your education or career choices, and what drives you to grow as a person and team member.</p>
-      <textarea name='Question 1' placeholder='Enter answer here'></textarea>
-
-      <h2>What field do you see yourself in when you graduate?</h2>
-      <p>This can be a short answer.</p>
-      <textarea name='Question 2' placeholder='Example: When I graduate I see myself working in the the Silicon Valley on a marketing team for such and such.'></textarea>
-
-      <h2>How do you see Gesher Group helping you towards it?</h2>
-      <textarea name='Question 3' placeholder='We are here to help!'></textarea>
-
-      <h2>How can you be an addition to Gesher Group?</h2>
-      <textarea name='Question 4' placeholder='How well do you work on a team?'></textarea>
-
-      <h2>Describe a time when you've utilized your network to benefit yourself or an organization you've been apart of.</h2>
-      <p>This can be a short answer.</p>
-      <textarea name='Question 5' placeholder='My Great Uncle  owns a consultation group for Steve Jobs impersonators, ...'></textarea>
-
-      <h2>Who are you in a team setting?</h2>
-      <p>Example: Leader, Innovator, Do-er, Clutch, etc.</p>
-      <textarea name='Question 6' placeholder='Explain why you fit this role?'></textarea>
-
-      <h2>Give a scenario where you've fit into this role.</h2>
-      <textarea name='Question 7' placeholder='Describe in detail'></textarea>
-
-      <h2>How would you deal with a bad leader in a professional environment?</h2>
-      <textarea name='Question 8' placeholder='Enter answer here'></textarea>
-
-      <h2>What area of Gesher Group do you wish to focus on?</h2>
-      <p>Sales, business development, startups, marketing, engineering</p>
-      <textarea name='Question 9' placeholder='And why?'></textarea>
-
-      <h2>What is an achievement your most proud of?</h2>
-      <textarea name='Question 10' placeholder='Anything goes!'></textarea>
-
-      <div>
-        <h2>Upload your resume</h2>
-        <p>Make sure your name is in the title, and it's free of errors.</p>
-        <input type='file' name='fileToUpload' id='fileToUpload' accept='application/pdf' />
-        <input type='button' value='Upload' onclick='start()'/>
-      </div>
-
-      <h3>Take a moment to double-check your responses, then submit below.</h3>
-
-      <hr />
-
-      <button class='button blue'>
-        Submit application
-      </button>
-    </form>
-  </div>
-</section>
+<script>
+    function UploadFile() {
+      var reader = new FileReader();
+      var file = document.getElementById('fileToUpload').files[0];
+      reader.onload = function(){
+        document.getElementById('fileContent').value=reader.result;
+        document.getElementById('filename').value=file.name;
+        document.getElementById('application_form').submit();
+      }
+      reader.readAsDataURL(file);
+    }
+    </script>
+    </div>
+  </section>
 
 <!-- NOTE: Put any scripts you need below this -->
 <script src='https://apis.google.com/js/api.js'></script>
