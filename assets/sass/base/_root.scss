@@ -161,6 +161,16 @@ nav {
       background: darken($blue, 2);
     }
   }
+
+  &.disabled {
+    pointer-events: none;
+    color: rgba($white, 0.75);
+    background: rgba($black, 0.5);
+  }
+
+  &.loading {
+    pointer-events: none;
+  }
 }
 
 section.header {
@@ -427,6 +437,13 @@ section#application {
  */
 *, ::before, ::after {
   box-sizing: inherit;
+}
+
+@media (min-width: 800px) {
+    section.testimonials {
+      max-width: 64em;
+      margin: 0 auto;
+    }
 }
 
 @media (max-width: 1000px) {
