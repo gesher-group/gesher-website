@@ -10,7 +10,7 @@ title: Gesher Group | Student Consulting
 description: > # this means to ignore newlines until 'baseurl:'
   Gesher Group is a student consulting team based out of the University of California at Santa Cruz.
 baseurl: '' # the subpath of your site, e.g. /blog
-url: 'http://geshergroup.org' # the base hostname & protocol for your site
+url: 'http://yourdomain.com' # the base hostname & protocol for your site
 
 # Markdown settings
 markdown: kramdown
