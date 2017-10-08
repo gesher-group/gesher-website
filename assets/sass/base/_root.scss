@@ -430,13 +430,20 @@ section#application {
 }
 
 section.membersConsultants {
+  padding: 1em;
+  .column-5 {
+    webkit-column-count: 5;
+    column-count: 5;
+    width: 100%;
+  }
   .container {
       position: relative;
-      width: 50%;
+      align-content: center;
+      width: inherit;
   }
 
   .image {
-    width:150px;
+    width: inherit;
     height: auto;
     border-radius: 50%;
     opacity: 1;
@@ -454,8 +461,8 @@ section.membersConsultants {
     transition: .5s ease;
     opacity: 0;
     position: absolute;
-    // top: 50%;
-    // left: 50%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%)
   }
@@ -466,8 +473,8 @@ section.membersConsultants {
   .text {
     background-color: #4CAF50;
     color: white;
-    font-size: 16px;
-    padding: 16px 32px;
+    font-size: 9px;
+    padding: 6px 12px;
   }
 }
 
