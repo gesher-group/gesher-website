@@ -11,7 +11,7 @@ layout: default
 <section class='value-prop'>
   <div class='left'>
     <h4>workshops + networking</h4>
-    <h3>Every Wednesday, you'll get the opportunity to learn from industry expers, get case study practice, or participate in workshops.</h3>
+    <h3>Every Wednesday, you'll get the opportunity to learn from industry experts, get case study practice, or participate in workshops.</h3>
   </div>
 
   <div class='right'>
@@ -48,7 +48,7 @@ layout: default
   </div>
   <div class='timestamp' id = '2'>
     <span class='marker'></span>
-    <span class='event'>Info Night</span>
+    <a class ='event' href='https://www.tinyurl.com/gesherfb17' title='7-9pm Engineering 2 499' style='text-decoration:none;color:#ffffff;'>Info Night</a>
     <span class='date'>10/4<span>
   </div>
   <div class='timestamp' id = '3'>
@@ -142,12 +142,21 @@ layout: default
         data-persist='garlic'
         id='application_form'
         method='POST'
+<<<<<<< HEAD
         action='https://script.google.com/macros/s/AKfycbwrXkSHvIchtSy6Ee1NKxThB39yTxYe8zxs7y1ugJSf-VAikMzF/exec'>
 
         <input type="hidden" value="" name="fileContent" id="fileContent">
         <input type="hidden" value="" name="filename" id="filename">
 
 
+=======
+        action='https://script.google.com/a/geshergroup.org/macros/s/AKfycbxZpzHfrStX4SZMpZYTmGCAMkOBPWNz1lw9ix2hO_B600XqWmk/exec'>
+
+        <input type='hidden' value='' name='fileContent' id='fileContent'>
+        <input type='hidden' value='' name='filename' id='filename'>
+
+
+>>>>>>> f2c0b60304e808468164f64222016b70bdda9f45
         <h2>First Name</h2>
         <input name='FirstName' type='name' placeholder='John' />
 
@@ -175,8 +184,13 @@ layout: default
         <textarea name='Question_4' placeholder='How well do you work on a team?'></textarea>
 
         <h2>Describe a time when you've utilized your network to benefit yourself or an organization you've been apart of.</h2>
+<<<<<<< HEAD
         <p>This can be a short answer.</p>
         <textarea name='Question_5' placeholder='My Great Uncle  owns a consultation group for Steve Jobs impersonators, ...'></textarea>
+=======
+        <p>Be consise, and provide examples of results.</p>
+        <textarea name='Question_5' placeholder='I organized an interview for a friend I had previously worked with...'></textarea>
+>>>>>>> f2c0b60304e808468164f64222016b70bdda9f45
 
         <h2>Who are you in a team setting?</h2>
         <p>Example: Leader, Innovator, Do-er, Clutch, etc.</p>
@@ -185,22 +199,33 @@ layout: default
         <h2>Give a scenario where you've fit into this role.</h2>
         <textarea name='Question_7' placeholder='Describe in detail'></textarea>
 
+<<<<<<< HEAD
         <h2>How would you deal with a bad leader in a professional environment?</h2>
+=======
+        <h2>How would you deal with a poor leader in a professional environment?</h2>
+>>>>>>> f2c0b60304e808468164f64222016b70bdda9f45
         <textarea name='Question_8' placeholder='Enter answer here'></textarea>
 
         <h2>What area of Gesher Group do you wish to focus on?</h2>
         <p>Sales, business development, startups, marketing, engineering</p>
         <textarea name='Question_9' placeholder='And why?'></textarea>
 
+<<<<<<< HEAD
         <h2>What is an achievement your most proud of?</h2>
+=======
+        <h2>What achievement are you most proud of?</h2>
+>>>>>>> f2c0b60304e808468164f64222016b70bdda9f45
         <textarea name='Question_10' placeholder='Anything goes!'></textarea>
 
         <div>
           <h2>Upload your resume</h2>
           <p>Make sure your name is in the title, and it's free of errors.</p>
-          <input type='file' name='fileToUpload' id='fileToUpload' accept='application/pdf' />
-          <input type='button' value='Upload' onclick='UploadFile()'/>
+          <input type='file' name='fileToUpload' id='fileToUpload' accept='application/pdf' onchange='validate()' />
+          <hr />
+          <h3 id='resultText'>Looks like you've left something blank.</h3>
+          <input id='submitButton' class='button blue' type='button' value='Submit' onclick='uploadFile()' />
         </div>
+<<<<<<< HEAD
 
         <h3>Take a moment to double-check your responses, then submit below.</h3>
         <hr />
@@ -208,26 +233,69 @@ layout: default
         <button class='button blue'>
           Submit application
         </button>
+=======
+>>>>>>> f2c0b60304e808468164f64222016b70bdda9f45
       </form>
 
-<script>
-    function UploadFile() {
-      var reader = new FileReader();
-      var file = document.getElementById('fileToUpload').files[0];
-      reader.onload = function(){
-        document.getElementById('fileContent').value=reader.result;
-        document.getElementById('filename').value=file.name;
-        document.getElementById('application_form').submit();
-      }
-      reader.readAsDataURL(file);
-    }
-    </script>
+      <script>
+        function validate () {
+          var resultText = document.getElementById('resultText')
+          var submitButton = document.getElementById('submitButton')
+          if (document.getElementById('fileToUpload').files[0]) {
+            submitButton.className = 'button blue'
+            resultText.innerHTML = 'Take a moment to double-check your responses, then submit below.'
+          } else {
+            submitButton.className = 'button blue disabled'
+            resultText.innerHTML = 'Looks like you\'ve left something blank.'
+          }
+        }
+
+        function uploadFile () {
+          var reader = new FileReader()
+          var file = document.getElementById('fileToUpload').files[0]
+          var resultText = document.getElementById('resultText')
+          var submitButton = document.getElementById('submitButton')
+
+          resultText.innerHTML = 'Sending your responses...'
+          submitButton.className = 'button blue loading'
+
+          reader.onload = function () {
+            document.getElementById('fileContent').value = reader.result
+            document.getElementById('filename').value = file.name
+            ajaxSubmit(document.getElementById('application_form'), () => {
+              document.getElementById('application_form').innerHTML = `<div><h2>Congratulations, application submitted!</h2><p>You'll hear from us within a few days. Thanks for your application.</p></div>`
+
+            })
+          }
+
+          reader.readAsDataURL(file)
+        }
+
+        // https://stackoverflow.com/a/34296482/6037036
+        function ajaxSubmit (form, callback) {
+          var xhr = new XMLHttpRequest()
+          var params = [].filter.call(form.elements, function (el) {
+            return !(el.type in ['checkbox', 'radio']) || el.checked
+          })
+          .filter(function(el) { return !!el.name }) //Nameless elements die.
+          .filter(function(el) { return !el.disabled }) //Disabled elements die.
+          .map(function(el) {
+              return encodeURIComponent(el.name) + '=' + encodeURIComponent(el.value)
+          }).join('&') //Then join all the strings by &
+          xhr.open('POST', form.action)
+          xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+          xhr.onload = callback.bind(xhr)
+          xhr.send(params)
+        }
+      </script>
     </div>
   </section>
 
-<!-- NOTE: Put any scripts you need below this -->
 <script src='https://apis.google.com/js/api.js'></script>
+<<<<<<< HEAD
 <!--<script src='{{ site.url }}/assets/js/upload-file-handler.js'></script>-->
+=======
+>>>>>>> f2c0b60304e808468164f64222016b70bdda9f45
 <script src='{{ site.url }}/assets/js/timeline.js' type='text/javascript'></script>
 <script data-cfasync='false' src='{{ site.url }}/assets/js/form-submission-handler.js'></script>
 <script src='{{ site.url }}/assets/js/garlic.min.js'></script>
@@ -240,6 +308,7 @@ layout: default
 
   window.onload = function () {
     getRandomEmail()
+    validate()
 
     document.getElementById('application').onclick = (e) => {
       if (e.target.id !== 'application') return
