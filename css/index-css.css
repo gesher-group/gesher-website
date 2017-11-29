@@ -1,15 +1,52 @@
-html{
+body,html{
 
-    background-color: #0C1429 !important;
+    background-color: white !important;
     z-index: 0;
+    height: 100%;
+}
+
+body {
+      /*
+      //padding-top: 50px;*/
+}
+
+.wide {
+      width:100%;
+      height:100%;
+      height:calc(50% - 1px);
+      background-image:url("../images/index-header.jpg");
+      background-size:cover;
+
+}
+
+.wide img {
+      width:100%;
+}
+
+.logo {
+    font-weight:bolder;
+    font-size: 35px;
+    color: white !important;
+    text-align:center;
+}
+.logo-subtext {
+    font-weight: lighter;
+    font-size: 13px;
+    color: white !important;
+    text-align:center;
+}
+
+.line {
+      padding-top:20px;
+      white-space:no-wrap;
+      overflow:hidden;
+      text-align:center;
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 45px;
+  height: 1100px;
   background-color: #0C1429;
   color: white;
 }
@@ -116,6 +153,7 @@ a:active {
            width: 100%;
            height: 75%;
            margin: auto;
+           background-color: white;
 }
 
 .put-in-center{
@@ -137,7 +175,6 @@ a:active {
     color: black;
     background-color: white;
     width: 100%;
-    height: 1000px;
     float: left;
 }
 
@@ -148,7 +185,6 @@ a:active {
 .info_section{
     border-radius: 1px;
     padding-top: 10%;
-    padding-left: 10%;
     width: 100%;
     background-color:#white !important;
     color:Black !important;
@@ -175,4 +211,15 @@ a:active {
     font-size: 13px;
     font-weight: lighter;
     color: gray !important;
+}
+
+
+
+.index-footer{
+    background-color: #0C1429 !important;
+    color: white;
+    padding-top: 12.5px;
+    height: 50px;
+    width: 100%;
+    font-size: 15px;
 }
