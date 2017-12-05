@@ -13,7 +13,7 @@ body {
       width:100%;
       height:100%;
       height:calc(50% - 1px);
-      background-image:url("../images/service-header.jpg");
+      background-image:url("../images/header-cropped.jpg");
       background-size:cover;
 
 }
