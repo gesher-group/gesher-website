@@ -253,3 +253,9 @@ p {
 
     max-width: 600px;
 }
+img {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    padding: 5px; 
+}
