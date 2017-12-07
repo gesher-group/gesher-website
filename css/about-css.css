@@ -253,22 +253,18 @@ p {
 
     max-width: 600px;
 }
-img {
-    border-radius: 50%;
-    height: 150px;
-    width: 150px;
-    padding: 5px;
-}
-.container {
+.container2 {
     position: relative;
     width: 20%%;
 }
 
 .image {
+  border-radius: 50%;
+  height: 200px;
+  padding: 5px;
   opacity: 1;
   display: block;
-  width: 20%;
-  height: auto;
+  width: auto;
   transition: .5s ease;
   backface-visibility: hidden;
 }
@@ -283,11 +279,11 @@ img {
   -ms-transform: translate(-50%, -50%)
 }
 
-.container:hover .image {
+.container2:hover .image {
   opacity: 0.3;
 }
 
-.container:hover .middle {
+.container2:hover .middle {
   opacity: 1;
 }
 
@@ -295,5 +291,5 @@ img {
   background-color: #4CAF50;
   color: white;
   font-size: 16px;
-  padding: 16px 32px;
+  padding: 8px 16px;
 }
