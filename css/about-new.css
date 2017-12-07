@@ -12,7 +12,7 @@ body {
 .wide {
       width:100%;
       height:100%;
-      height:calc(25% - 1px);
+      height:calc(50% - 1px);
       background-image:url("../images/header-cropped.jpg");
       background-size:cover;
 
@@ -252,44 +252,4 @@ a:active {
 p {
 
     max-width: 600px;
-}
-.container2 {
-    position: relative;
-    width: 20%%;
-}
-
-.image {
-  border-radius: 50%;
-  height: 200px;
-  padding: 5px;
-  opacity: 1;
-  display: block;
-  width: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
-}
-
-.middle {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%)
-}
-
-.container2:hover .image {
-  opacity: 0.3;
-}
-
-.container2:hover .middle {
-  opacity: 1;
-}
-
-.text {
-  background-color: #4CAF50;
-  color: white;
-  font-size: 16px;
-  padding: 16px 32px;
 }

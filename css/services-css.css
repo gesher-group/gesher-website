@@ -253,3 +253,7 @@ p {
 
     max-width: 600px;
 }
+
+.sweet-images{
+    overflow: hidden;
+}
