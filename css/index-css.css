@@ -1,0 +1,234 @@
+body,html{
+
+    background-color: white !important;
+    z-index: 0;
+    height: 100%;
+}
+
+body {
+      /*
+      //padding-top: 50px;*/
+}
+
+.wide {
+      width:100%;
+      height:100%;
+      height:calc(50% - 1px);
+      background-image:url("../images/index-header-cropped.jpg");
+      background-size:cover;
+
+}
+
+.wide img {
+      width:100%;
+}
+
+.logo {
+    font-weight:bolder;
+    font-size: 35px;
+    color: white !important;
+    text-align:center;
+}
+.logo-subtext {
+    font-weight: lighter;
+    font-size: 13px;
+    color: white !important;
+    text-align:center;
+}
+
+.line {
+      padding-top:20px;
+      white-space:no-wrap;
+      overflow:hidden;
+      text-align:center;
+}
+
+footer {
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 1100px;
+  background-color: #0C1429;
+  color: white;
+}
+
+#header{
+   padding:10px;
+   height:20px;
+   position:fixed;
+   width:100%;
+}
+
+.my-navbar{
+    position: fixed !important;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+
+}
+.my-navbar-bg{
+    background-color: #0C1429;
+    height: 80px;
+    width: 100%;
+    position: absolute;
+}
+
+.my-navbar-img{
+    padding-bottom: 10px;
+    padding-left: 6%;
+    padding-top: 5px;
+    position: absolute;
+    z-index: 1;
+
+}
+
+a:link {
+    color: white;
+}
+
+/* visited link */
+a:visited {
+    color: white;
+}
+
+/* mouse over link */
+a:hover {
+    color: white;
+}
+
+/* selected link */
+a:active {
+    color: white;
+}
+
+.my-navbar-text{
+    z-index: 2;
+    padding-right: 10%;
+    position: relative;
+    padding-top: 30px !important;
+    z-index: 1;
+    top: 0;
+    float:right;
+    color: #FFFFFF !important;
+}
+
+
+
+.index-title{
+
+    background-color:#0C1429 !important;
+    padding-bottom: 3px;
+    display: block;
+    font-size: 41px;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: lighter;
+    padding-top: 0px;
+    color: white;
+
+}
+
+
+.custom-h2{
+    display: block;
+    font-size: 41px;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: lighter;
+    padding-top: 0px;
+    color: black;
+}
+
+.main-div
+{
+    position: absolute;
+           top: 5px;
+           left: 0;
+           bottom: 0;
+           right: 0;
+           width: 100%;
+           height: 75%;
+           margin: auto;
+           background-color: white;
+}
+
+.put-in-center{
+    position: absolute;
+           top: 5px;
+           left: 0;
+           bottom: 0;
+           right: 0;
+           width: 100%;
+           height: 75%;
+           margin: auto;
+}
+
+.container{
+    z-index: 0 !important;
+}
+
+.home_info{
+    color: black;
+    background-color: white;
+    width: 100%;
+    float: left;
+}
+
+.contact-button{
+    color: #202E56 !important;
+}
+
+.info_section{
+    border-radius: 1px;
+    padding-top: 10%;
+    width: 100%;
+    background-color:#white !important;
+    color:Black !important;
+
+}
+
+.info_section_title{
+
+    font-size: 25px;
+    font-weight:normal;
+}
+.info_section_text{
+    padding-left: 1px;
+    width: 75%;
+    font-size: 13px;
+    font-weight: lighter;
+    color: gray !important;
+}
+.info_section_button{
+    padding-top: 10px;
+    padding-left: 25%;
+    padding-right: 50%;
+    width: 75%;
+    font-size: 13px;
+    font-weight: lighter;
+    color: gray !important;
+}
+
+
+
+.index-footer{
+    background-color: #0C1429 !important;
+    color: white;
+    padding-top: 12.5px;
+    height: 50px;
+    width: 100%;
+    font-size: 10px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    
+    overflow: hidden;
+}
