@@ -201,9 +201,9 @@ a:active {
     color: black !important;
 }
 .info_section_text{
-    padding-left: 1px;
+    padding-left: 1em;
     width: 100%;
-    font-size: 13px;
+    font-size: 25px;
     font-weight: lighter;
     color: gray !important;
 }
