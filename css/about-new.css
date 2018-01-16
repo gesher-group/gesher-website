@@ -246,11 +246,12 @@ a:active {
     padding-top: 12.5px;
     height: 50px;
     width: 100%;
-    font-size: 10px;
+    font-size: 13px;
 }
 
 p {
 
+    
     max-width: 600px;
 }
 .container2 {

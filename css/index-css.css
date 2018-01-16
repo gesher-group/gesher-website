@@ -199,7 +199,7 @@ a:active {
 .info_section_text{
     padding-left: 1px;
     width: 75%;
-    font-size: 13px;
+    font-size: 22px;
     font-weight: lighter;
     color: gray !important;
 }
@@ -221,7 +221,7 @@ a:active {
     padding-top: 12.5px;
     height: 50px;
     width: 100%;
-    font-size: 10px;
+    font-size: 13px;
 }
 
 .video-container {
@@ -229,6 +229,6 @@ a:active {
     padding-bottom: 56.25%;
     padding-top: 35px;
     height: 0;
-    
+
     overflow: hidden;
 }
