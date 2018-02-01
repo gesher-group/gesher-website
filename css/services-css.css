@@ -203,7 +203,7 @@ a:active {
 .info_section_text{
     padding-left: 1em;
     width: 100%;
-    font-size: 25px;
+    font-size: 22px;
     font-weight: lighter;
     color: gray !important;
 }
@@ -246,7 +246,7 @@ a:active {
     padding-top: 12.5px;
     height: 50px;
     width: 100%;
-    font-size: 10px;
+    font-size: 13px;
 }
 
 p {
