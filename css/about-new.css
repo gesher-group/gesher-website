@@ -251,7 +251,7 @@ a:active {
 
 p {
 
-    
+
     max-width: 600px;
 }
 .container2 {
@@ -260,7 +260,7 @@ p {
 }
 
 .image {
-  border-radius: 50%;
+  border-radius: 90%;
   height: 200px;
   padding: 5px;
   opacity: 1;
@@ -293,4 +293,14 @@ p {
   color: white;
   font-size: 16px;
   padding: 8px 16px;
+}
+.boxed {
+  height: 100%;
+  background-color: #FAFAFA;
+  width: auto;
+  border: 1px solid #0C1429;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  font-size: 21px;
+  box-shadow: 2px 3px #888888;
 }
