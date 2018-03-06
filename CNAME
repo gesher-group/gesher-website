@@ -1,2 +1,6 @@
 www.geshergroup.org
 geshergroup.org
+/index.html				=> www.geshergroup.org
+/about.html				=> www.geshergroup.org/about
+/services.html			=> www.geshergroup.org/services	
+/contact.html			=> www.geshergroup.org/contact	
