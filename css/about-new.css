@@ -227,7 +227,6 @@ a:active {
         font-weight: 200;
         font-size: 25px;
         color: black !important;
-		padding-left: 13.5%;
     }
 
     .sub-header-text{
@@ -252,23 +251,13 @@ a:active {
 
 p {
 
-	padding-left:13.5%;
-	padding-top:50px;
-    max-width: 75%;
-	font-size: 15px;
+
+    max-width: 600px;
 }
 .container2 {
     position: relative;
     width: 20%%;
 }
-
-.hr-sm {
-	width: 40px;
-	margin-left: 13.5%;
-	border-color: black;
-}
-
-
 
 .image {
   /* border-radius: 90%; */
