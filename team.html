@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Gesher Group</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/team.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script language="JavaScript">
+      function openCity(evt, cityName) {
+      // Declare all variables
+      var i, tabcontent, tablinks;
+
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+      }
+
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+      }
+    </script>
+
+  </head>
+  <body>
+
+      <nav class="navbar navbar-toggleable-md navbar-inverse bg-faded" style="background-color: #0C1429;">
+              <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <a class="navbar-brand" href="index.html">
+                  <img src="images/GesherStack1.svg" width="100" height="40" alt="" style="padding-left 6%;">
+              </a>
+              <div class="collapse navbar-collapse" id="navbarNav" style="padding-right: 10%;">
+
+                  <ul class="navbar-nav mr-auto">
+                  </ul>
+
+
+                  <ul class="navbar-nav navbar-right" >
+                      <li class="nav-item">
+                          <a class="nav-link" href="index.html">Home</a>
+                      </li>
+                      <li class="nav-item active">
+                          <a class="nav-link" href="team.html">Teams<span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="services.html">Services</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="join.html">Join</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="contact.html">Contact</a>
+                      </li>
+                      <!-- <a href="join.html" >
+                            <button type="button" class="btn btn-primary btn-xl">Join</button>
+                          </a> -->
+                  </ul>
+            </div>
+      </nav>
+      <div class="wide">
+           <div class="col-xs-5 line"></div>
+           <br></br><br></br>
+           <div class="col-xs-2 logo">Meet the Team</div>
+           <div class="col-xs-2 logo-subtext">
+             Our group works with clients from around the Greater Silicon Valley. Gesher Group is a growing network of student consultants <br /> working to expand our network, positively impact businesses, and further our professional careers.
+           </div>
+
+       </div>
+<!-- Main Container -->
+      <div class = "container-fluid">
+          <div class="main-div">
+              <!-- THIS IS THE PAGE "SUB"-HEADER SECTION -->
+
+                <hr>
+
+
+                  <!-- MAIN CONTAINER.... Put all most code here-->
+                  <!-- Tab links -->
+                  <div class="tab" margin-left="5px">
+                    <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Board</button>
+                    <script>
+                    // Get the element with id="defaultOpen" and click on it
+                    document.getElementById("defaultOpen").click();
+                    </script>
+                    <button class="tablinks" onclick="openCity(event, 'Madrid')">Project Managers</button>
+                    <button class="tablinks" onclick="openCity(event, 'Paris')">Consultants</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">Labs</button>
+                  </div>
+                  <!-- Tab content -->
+                  <div id="London" class="tabcontent">
+                    <center>
+                        <div class="row">
+                          <div class="col">
+                            <div class="boxed">
+                              <div class="container2">
+                                <a href="https://www.linkedin.com/in/lenabacon/"><img src="images/lena.JPG" class="image" alt="images/lena.jpg">
+                                  <div class="middle">
+                                    <i class="fab fa-linkedin fa-4x"></i>
+                              </div>
+                            </a>
+                          </div>
+                          Lena Bacon <br /><h5>President</h5>
+                        </div>
+                        </div>
+                        <div class="col">
+                          <div class="boxed">
+                            <div class="container2">
+                              <a href="https://www.linkedin.com/in/brooke-e-drury/"><img src="images/brooke.JPG" class="image" alt="images/lena.jpg">
+                                <div class="middle">
+                                  <i class="fab fa-linkedin fa-4x"></i>
+                                </div>
+                              </a>
+                          </div>
+                          Brooke Drury <br /><h5>External Affairs</h5>
+                        </div>
+                        </div>
+
+                          <div class="col">
+                            <div class="boxed">
+                            <div class="container2">
+                            <a href="https://www.linkedin.com/in/danielhollar/"><img src="images/danielhollar.JPG" class="image" alt="images/lena.jpg">
+                              <div class="middle">
+                                <i class="fab fa-linkedin fa-4x"></i>
+                              </div></a>
+                            </div>
+                            Daniel Hollar <br /><h5>Projects Director</h5>
+                          </div>
+                            </div>
+                              <div class="col">
+                                <div class="boxed">
+                                  <div class="container2">
+                                    <a href="https://www.linkedin.com/in/sarah-adler/"><img src="images/sarah.JPG" class="image" alt="images/lena.jpg">
+                                      <div class="middle">
+                                        <i class="fab fa-linkedin fa-4x"></i>
+                                      </div>
+                                    </a>
+                                  </div>
+                                  Sarah Adler <br /><h5>Internal Affairs</h5>
+                                </div>
+                              </div>
+                              <div class="col">
+                                <div class="boxed">
+                                  <div class="container2">
+                                    <a href="https://www.linkedin.com/in/keyanchang/"><img src="images/keyan.JPG" class="image" alt="images/lena.jpg">
+                                      <div class="middle">
+                                        <i class="fab fa-linkedin fa-4x"></i>
+                                      </div></a>
+                                    </div>
+                                    Robert Fazio <br /><h5>Labs Director</h5>
+                                  </div>
+                                </div>
+                          </div>
+                        <br></br>
+                    </center>
+                  </div>
+
+                  <div id="Madrid" class="tabcontent">
+                    <h3>Madrid</h3>
+                    <p>Madrid is the capital of Spain.</p>
+                  </div>
+
+                  <div id="Paris" class="tabcontent">
+                    <h3>Paris</h3>
+                    <p>Paris is the capital of France.</p>
+                  </div>
+
+                  <div id="Tokyo" class="tabcontent">
+                    <h3>Tokyo</h3>
+                    <p>Tokyo is the capital of Japan.</p>
+                  </div>
+
+
+
+
+
+
+
+                            <br></br>
+                            <!-- FOOTER -->
+                            <div class = "index-footer">
+                                <center>
+                                    <p> <a href="index.html">
+                                      <img src="images/GesherSqu.svg" class="rounded" alt="..." height="20" width="20">
+                                  </a> | Gesher Group 2017 | <a href="mailto:team@geshergroup.com">team@geshergroup.com</a> | <a href="Bylaws 2016.pdf">legal</a></p>
+                                </center>
+                            </div>
+                    </div>
+                  </div>
+  </div>
+      <!-- Main Container End -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
