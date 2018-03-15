@@ -13,7 +13,7 @@ body {
       width:100%;
       height:100%;
       height:calc(50% - 1px);
-      opacity: .7;
+      opacity: 1;
       background-image:url("../images/header-cropped.jpg");
       background-size:cover;
 
@@ -251,6 +251,12 @@ a:active {
     font-size: 13px;
 }
 
+.image {
+	padding-left: 5%
+}
+
+
+
 p {
 
     max-width: 600px;
@@ -336,15 +342,15 @@ p {
 
 .timeline > li > .timeline-badge {
   color: #fff;
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
   line-height: 50px;
   font-size: 1.4em;
   text-align: center;
   position: absolute;
-  top: 16px;
+  top: 25px;
   left: 50%;
-  margin-left: -25px;
+  margin-left: -17px;
   background-color: #999999;
   z-index: 100;
   border-top-right-radius: 50%;
@@ -372,11 +378,11 @@ p {
 }
 
 .timeline-badge.warning {
-    background-color: #f0ad4e !important;
+    background-color: #62a5e6 !important;
 }
 
 .timeline-badge.info {
-    background-color: #5bc0de !important;
+    background-color: #62a5e6 !important;
 }
 
 .timeline-title {
