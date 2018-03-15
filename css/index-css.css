@@ -28,6 +28,7 @@ body {
     font-size: 35px;
     color: white !important;
     text-align:center;
+    text-shadow: 2px 2px black;
 }
 .logo-subtext {
     font-weight: lighter;
@@ -197,7 +198,7 @@ a:active {
     font-weight:normal;
 }
 .info_section_text{
-	text-align: justify; 
+	text-align: justify;
 	line-height: 180%;
     padding-left: 1px;
     width: 75%;
