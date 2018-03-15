@@ -28,6 +28,7 @@ body {
     font-size: 35px;
     color: white !important;
     text-align:center;
+    text-shadow: 2px 2px black;
 }
 .logo-subtext {
     font-weight: lighter;
@@ -197,11 +198,12 @@ a:active {
     font-weight:normal;
 }
 .info_section_text{
+	text-align: justify;
+	line-height: 180%;
     padding-left: 1px;
     width: 75%;
-    font-size: 22px;
-    font-weight: lighter;
-    color: gray !important;
+    font-size: 15px;
+    color: black !important;
 }
 .info_section_button{
     padding-top: 10px;
@@ -213,6 +215,13 @@ a:active {
     color: gray !important;
 }
 
+.boxed {
+  height: 100%;
+  width: 85%;
+  border: 1px solid #DDDDDD;
+  padding-bottom: 5%;
+  font-size: 21px;
+}
 
 
 .index-footer{

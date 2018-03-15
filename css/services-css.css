@@ -13,9 +13,10 @@ body {
       width:100%;
       height:100%;
       height:calc(50% - 1px);
+      opacity: 1;
       background-image:url("../images/header-cropped.jpg");
       background-size:cover;
-
+      /* color: #0C1429; */
 }
 
 .wide img {
@@ -27,10 +28,11 @@ body {
     font-size: 35px;
     color: white !important;
     text-align:center;
+    text-shadow: 2px 2px black;
 }
 .logo-subtext {
     font-weight: lighter;
-    font-size: 13px;
+    font-size: 15px;
     color: white !important;
     text-align:center;
 }
@@ -188,24 +190,38 @@ a:active {
 
 .info_section{
 
-    padding-top: 10%;
+    padding-top: 1%;
     width: 100%;
     background-color:#white !important;
     color:Black !important;
 
 }
+.info_section_2{
 
+    padding-top: 2%;
+    padding-left: 5%;
+    width: 100%;
+    background-color:#white !important;
+    color:Black !important;
+
+}
 .info_section_title{
+    padding-left: 3%;
+    padding-bottom: 1%;
+    padding-right: 1%;
+    padding-top: 3%;
+    text-align: left;
     font-weight: 200;
     font-size: 25px;
     color: black !important;
 }
 .info_section_text{
-    padding-left: 1em;
+    padding-left: 5%;
     width: 100%;
-    font-size: 22px;
+    font-size: 15px;
     font-weight: lighter;
     color: gray !important;
+    text-align: left;
 }
 .info_section_button{
     padding-top: 10px;
@@ -224,19 +240,19 @@ a:active {
     }
 
     .sub-header-title{
-        font-weight: 200;
-        font-size: 25px;
-        color: black !important;
+      font-weight: 200;
+      font-size: 35px;
+      color: black !important;
     }
 
     .sub-header-text{
         font-weight: lighter;
-        font-size: 13px;
+        font-size: 15px;
         color: gray !important;
-        padding-left: 25%;
-        padding-right: 25%;
+        /* padding-left: 5%;
+        padding-right: 5%; */
         align: center;
-        max-width: 50px !important;
+        max-width: 600px !important;
     }
 
 
@@ -251,9 +267,65 @@ a:active {
 
 p {
 
+    
     max-width: 600px;
 }
 
 .sweet-images{
     overflow: hidden;
+}
+
+hr {
+    width: 40px;
+    margin-left: 0%;
+    border-color: black;
+}
+
+.boxed {
+  height: 100%;
+  width: 85%;
+  border: 1px solid #DDDDDD;
+  padding-bottom: 5%;
+  font-size: 21px;
+}
+.container2 {
+    position: relative;
+    /* width: 20%; */
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.container2:hover .image {
+  opacity: 0.3;
+}
+
+.container2:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 15px;
+  padding: 8px 16px;
+}
+.image2 {
+  padding-top: 10%;
+
 }
