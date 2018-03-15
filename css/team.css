@@ -331,7 +331,8 @@ p {
   padding-top: 8px;
   font-size: 17px;
   /* box-shadow: 2px 3px #BBBBBB; */
-  margin: 5px;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
 /* Style the tab */
