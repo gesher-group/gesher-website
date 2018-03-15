@@ -325,7 +325,7 @@ p {
 .boxed {
   height: 100%;
   background-color: #FAFAFA;
-  width: 200px;
+  width: 190px;
   border: 1px solid #BBBBBB;
   padding-bottom: 8px;
   padding-top: 8px;
@@ -376,7 +376,7 @@ p {
 /* Style the tab content */
 .tabcontent {
     display: none;
-    padding: 6px 12px;
+    padding: 3px 3px;
     border: 1px solid #ccc;
     border-top: none;
     margin-left: 10px;
