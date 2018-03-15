@@ -227,6 +227,11 @@ a:active {
     font-weight: lighter;
     color: gray !important;
 }
+hr {
+    width: 40px;
+    margin-left: 0%;
+    border-color: black;
+}
 
 
     .sub-header{
@@ -311,17 +316,19 @@ p {
   font-size: 16px;
   padding: 8px 16px;
 }
+
 .boxed {
   height: 100%;
   background-color: #FAFAFA;
-  width: auto;
-  border: 1px solid #0C1429;
+  width: 200px;
+  border: 1px solid #BBBBBB;
   padding-bottom: 8px;
   padding-top: 8px;
-  font-size: 21px;
-  box-shadow: 2px 3px #888888;
+  font-size: 17px;
+  /* box-shadow: 2px 3px #BBBBBB; */
   margin: 5px;
 }
+
 /* Style the tab */
 .tab {
     overflow: hidden;
