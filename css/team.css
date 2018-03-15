@@ -206,6 +206,11 @@ a:active {
 
 }
 .info_section_title{
+    padding-left: 3%;
+    padding-bottom: 1%;
+    padding-right: 1%;
+    padding-top: 3%;
+    text-align: left;
     font-weight: 200;
     font-size: 25px;
     color: black !important;
