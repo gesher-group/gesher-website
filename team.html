@@ -7,33 +7,6 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Gesher Group</title>
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/team.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-    <script language="JavaScript">
-      function openCity(evt, cityName) {
-      // Declare all variables
-      var i, tabcontent, tablinks;
-
-      // Get all elements with class="tabcontent" and hide them
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
-      }
-
-      // Get all elements with class="tablinks" and remove the class "active"
-      tablinks = document.getElementsByClassName("tablinks");
-      for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace(" active", "");
-      }
-
-      // Show the current tab, and add an "active" class to the button that opened the tab
-      document.getElementById(cityName).style.display = "block";
-      evt.currentTarget.className += " active";
-      }
-    </script>
 
   </head>
   <body>
@@ -79,7 +52,7 @@
            <br></br><br></br>
            <div class="col-xs-2 logo">Meet the Team</div>
            <div class="col-xs-2 logo-subtext">
-             Our group works with clients from around the Greater Silicon Valley. Gesher Group is a growing network of student consultants <br /> working to expand our network, positively impact businesses, and further our professional careers.
+             Our group works with clients from around the Greater Silicon Valley. Gesher Group is a growing network of student <br /> consultants working to expand our network, positively impact businesses, and further our professional careers.
            </div>
 
        </div>
@@ -93,16 +66,15 @@
 
                   <!-- MAIN CONTAINER.... Put all most code here-->
                   <!-- Tab links -->
-                  <div class="tab" margin-left="5px">
-                    <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Board</button>
-                    <script>
-                    // Get the element with id="defaultOpen" and click on it
-                    document.getElementById("defaultOpen").click();
-                    </script>
-                    <button class="tablinks" onclick="openCity(event, 'Madrid')">Project Managers</button>
-                    <button class="tablinks" onclick="openCity(event, 'Paris')">Consultants</button>
-                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">Labs</button>
-                  </div>
+                  <center>
+                    <div class="tab">
+                      <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Board</button>
+                      <button class="tablinks" onclick="openCity(event, 'Madrid')">Project Managers</button>
+                      <button class="tablinks" onclick="openCity(event, 'Paris')">Consultants</button>
+                      <button class="tablinks" onclick="openCity(event, 'Tokyo')">Labs</button>
+                    </div>
+
+                  </center>
                   <!-- Tab content -->
                   <div id="London" class="tabcontent">
                     <center>
@@ -187,7 +159,7 @@
                   </div>
 
 
-
+                  <hr>
 
 
 
@@ -203,12 +175,40 @@
                             </div>
                     </div>
                   </div>
-  </div>
-      <!-- Main Container End -->
+                <!-- Main Container End -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script language="JavaScript">
+      function openCity(evt, cityName) {
+        // Declare all variables
+        var i, tabcontent, tablinks;
+
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        // Get all elements with class="tablinks" and remove the class "active"
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+
+      document.getElementById("defaultOpen").click();
+    </script>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <script src="js/bootstrap.min.js"></script>
+    <link href="css/team.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   </body>
 </html>
