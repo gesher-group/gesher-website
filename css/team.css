@@ -196,18 +196,27 @@ a:active {
     color:Black !important;
 
 }
+.info_section_2{
 
+    padding-top: 2%;
+    padding-left: 5%;
+    width: 100%;
+    background-color:#white !important;
+    color:Black !important;
+
+}
 .info_section_title{
     font-weight: 200;
     font-size: 25px;
     color: black !important;
 }
 .info_section_text{
-    padding-left: 1px;
+    padding-left: 5%;
     width: 100%;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: lighter;
     color: gray !important;
+    text-align: left;
 }
 .info_section_button{
     padding-top: 10px;
