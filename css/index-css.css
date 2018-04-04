@@ -30,12 +30,32 @@ body {
     text-align:center;
     text-shadow: 2px 2px black;
 }
+
+.logo-Index {
+    font-weight:bolder;
+    font-size: 35px;
+    color: white !important;
+    text-align:left;
+	padding-left: 5%;
+	
+   
+}
+
 .logo-subtext {
     font-weight: lighter;
     font-size: 13px;
     color: white !important;
     text-align:center;
 }
+
+.logo-subtext-Index {
+    font-weight: lighter;
+    font-size: 18px;
+    color: white !important;
+    padding-left: 5%;
+	text-align:left;
+}
+
 
 .line {
       padding-top:20px;
@@ -197,14 +217,30 @@ a:active {
     font-size: 25px;
     font-weight:normal;
 }
+
+.info_section_title-Index {
+
+    font-size: 25px;
+    font-weight:normal;
+	text-align:left;
+
+	
+}
+
 .info_section_text{
 	text-align: justify;
 	line-height: 180%;
     padding-left: 1px;
-    width: 75%;
+    width: 100%;
     font-size: 15px;
     color: black !important;
 }
+
+.info_section_Pad {
+	
+	padding-right: 10%;
+}
+
 .info_section_button{
     padding-top: 10px;
     padding-left: 25%;
@@ -223,6 +259,23 @@ a:active {
   font-size: 21px;
 }
 
+hr {
+    width: 40px;
+    margin-left: 0%;
+    border-color: LightGray;
+}
+
+hr-Index {
+    width: 40px;
+    margin-left: 0%;
+  color: LightGray;
+}
+
+.hr-sm {
+  width: 40px;
+  margin-left: 13.5%;
+  border-color: black;
+}
 
 .index-footer{
     background-color: #0C1429 !important;
@@ -233,6 +286,123 @@ a:active {
     font-size: 13px;
 }
 
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+
+/* Add some content at the bottom of the video/page */
+.content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Style the button used to pause/play the video */
+#myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+#myBtn:hover {
+    background: #ddd;
+    color: black;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #2a7fe0;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 17px;
+  padding: 7px;
+  width: 80px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 15px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button-RM {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #2a7fe0;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 13px;
+  padding: 7px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button-RM span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-RM span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+}
+
+.button-RM:hover span {
+  padding-right: 15px;
+}
+
+.button-RM:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
@@ -240,4 +410,12 @@ a:active {
     height: 0;
 
     overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
