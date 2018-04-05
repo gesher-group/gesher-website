@@ -27,14 +27,16 @@ body {
     font-weight:bolder;
     font-size: 35px;
     color: white !important;
-    text-align:center;
-    text-shadow: 2px 2px black;
+    text-align:left;
+	padding-left: 7%;
+
 }
 .logo-subtext {
     font-weight: lighter;
-    font-size: 13px;
+    font-size: 15px;
     color: white !important;
-    text-align:center;
+    text-align:left;
+	padding-left: 7%;
 }
 
 .line {
