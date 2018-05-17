@@ -7,15 +7,15 @@ Website built using bootstrap by the Gesher Labs Team!
 
 ## **Spring 2018 Timeline**
 ### March
-- [x] Deploy Join page updates for recruitment 
-- [x] Finish homepage and fill text 
+- [x] Deploy Join page updates for recruitment
+- [x] Finish homepage and fill text
 - [x] Fill content for Teams page
 ### April
-- [ ] Onboard the new members of Labs
-- [ ] Finish Teams page
-- [ ] Update Project teams
-- [ ] Add previous company information to Services page
-- [ ] Begin Development of Labs page
+- [x] Onboard the new members of Labs
+- [x] Update Project teams
+- [x] Begin Development of Labs page
 ### May
+- [ ] Add previous company information to Services page
+- [ ] Finish Teams page - edit photo height
 - [ ] Final developments (tbd.)
 - [ ] Deploy Labs Page
