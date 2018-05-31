@@ -12,9 +12,9 @@ body {
 .wide {
       width:100%;
       height:100%;
-      height:calc(50% - 1px);
+      height:calc(60% - 1px);
       opacity: 1;
-      background-image:url("../images/header-cropped.jpg");
+      background-image:url("../images/bannerLabs.jpg");
       background-size:cover;
       /* color: #0C1429; */
 }
@@ -61,6 +61,8 @@ footer {
    position:fixed;
    width:100%;
 }
+
+
 
 .my-navbar{
     position: fixed !important;
