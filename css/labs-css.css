@@ -179,6 +179,10 @@ a:active {
     z-index: 0 !important;
 }
 
+.github-widget {
+    font-size: 10px;
+}
+
 .home_info{
     color: black;
     background-color: white;
