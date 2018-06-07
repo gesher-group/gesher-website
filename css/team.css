@@ -278,7 +278,6 @@ p {
 }
 .container2 {
     position: relative;
-    width: 20%%;
 }
 
 .hr-sm {
@@ -289,11 +288,12 @@ p {
 
 .image {
   /* border-radius: 90%; */
-  height: 200px;
-  padding: 5px;
+  height: 205px;
+  width: 173px;
+  /* padding: 5px; */
   opacity: 1;
   display: block;
-  width: auto;
+  /* width: auto; */
   transition: .5s ease;
   backface-visibility: hidden;
 }
@@ -329,10 +329,10 @@ p {
   width: 175px;
   border: 1px solid #BBBBBB;
   padding-bottom: 8px;
-  padding-top: 8px;
+  /* padding-top: 8px; */
   font-size: 17px;
   /* box-shadow: 2px 3px #BBBBBB; */
-  margin-top: 4px;
+  margin-top: 12px;
   margin-bottom: 4px;
 }
 
