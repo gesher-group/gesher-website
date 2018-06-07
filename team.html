@@ -10,6 +10,17 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
+          <!-- Include all compiled plugins (below), or include individual files as needed -->
+          <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<script src="js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   </head>
   <body>
 
@@ -280,7 +291,7 @@
                             <div padding-bottom="50px">
                               <div class="boxed">
                                 <div class="container2">
-                                  <a href="https://www.linkedin.com/company/gesher-group/"><img src="images/philip.JPG" class="image" alt="images/lena.jpg">
+                                  <a href="https://www.linkedin.com/company/gesher-group/"><img src="images/lupu.JPG" class="image" alt="images/lena.jpg">
                                     <div class="middle">
                                       <i class="fab fa-linkedin fa-4x"></i>
                                     </div>
@@ -362,7 +373,7 @@
                           <div padding-bottom="50px">
                             <div class="boxed">
                               <div class="container2">
-                                <a href="https://www.linkedin.com/company/gesher-group/"><img src="images/Omar.jpg" class="image" alt="images/lena.jpg">
+                                <a href="https://www.linkedin.com/company/gesher-group/"><img src="images/lupu.jpg" class="image" alt="images/lena.jpg">
                                   <div class="middle">
                                     <i class="fab fa-linkedin fa-4x"></i>
                               </div>
@@ -466,38 +477,29 @@
                     </div>
                   </div>
                 <!-- Main Container End -->
+                <script language="JavaScript">
+                function openCity(evt, cityName) {
+                // Declare all variables
+                var i, tabcontent, tablinks;
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script language="JavaScript">
-      function openCity(evt, cityName) {
-        // Declare all variables
-        var i, tabcontent, tablinks;
+                // Get all elements with class="tabcontent" and hide them
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                }
 
-        // Get all elements with class="tabcontent" and hide them
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
+                // Get all elements with class="tablinks" and remove the class "active"
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
 
-        // Get all elements with class="tablinks" and remove the class "active"
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
+                // Show the current tab, and add an "active" class to the button that opened the tab
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " active";
+                }
 
-        // Show the current tab, and add an "active" class to the button that opened the tab
-        document.getElementById(cityName).style.display = "block";
-        evt.currentTarget.className += " active";
-      }
-
-      document.getElementById("defaultOpen").click();
-    </script>
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <script src="js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+                document.getElementById("defaultOpen").click();
+                </script>
   </body>
 </html>

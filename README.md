@@ -15,7 +15,9 @@ Website built using bootstrap by the Gesher Labs Team!
 - [x] Update Project teams
 - [x] Begin Development of Labs page
 ### May
+- [x] Final developments
+- [x] Deploy Labs Page
+- [x] Patreon enabled
+### Summer
 - [ ] Add previous company information to Services page
 - [ ] Finish Teams page - edit photo height
-- [ ] Final developments (tbd.)
-- [ ] Deploy Labs Page
