@@ -14,7 +14,7 @@ body {
       height:100%;
       height:calc(60% - 1px);
       opacity: 1;
-      background-image:url("../images/bannerLabs.jpg");
+      background-image:url("../images/BannerLabs.jpg");
       background-size:cover;
       /* color: #0C1429; */
 }
@@ -274,7 +274,7 @@ a:active {
 
 p {
 
-    
+
     max-width: 600px;
 }
 
