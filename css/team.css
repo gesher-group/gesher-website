@@ -1,8 +1,9 @@
 body,html{
-
-    background-color: white !important;
-    z-index: 0;
-    height: 100%;
+  background-color: white !important;
+  z-index: 0;
+  height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -10,39 +11,39 @@ body {
 }
 
 .wide {
-      width:100%;
-      height:100%;
-      opacity: 1;
-      height:calc(50% - 1px);
-      background-image:url("../images/header-cropped.jpg");
-      background-size:cover;
+  width:100%;
+  height:100%;
+  opacity: 1;
+  height:calc(50% - 1px);
+  background-image:url("../images/header-cropped.jpg");
+  background-size:cover;
 
 }
 
 .wide img {
-      width:100%;
+  width:100%;
 }
 
 .logo {
-    font-weight:bolder;
-    font-size: 35px;
-    color: white !important;
-  	text-align:left;
-	  padding-left: 7%;
+  font-weight:bolder;
+  font-size: 35px;
+  color: white !important;
+  text-align:left;
+	padding-left: 7%;
 }
 .logo-subtext {
-    font-weight: lighter;
-    font-size: 15px;
-    color: white !important;
-  	text-align:left;
-	  padding-left: 7%;
+  font-weight: lighter;
+  font-size: 15px;
+  color: white !important;
+  text-align:left;
+	padding-left: 7%;
 }
 
 .line {
-      padding-top:20px;
-      white-space:no-wrap;
-      overflow:hidden;
-      text-align:center;
+  padding-top:20px;
+  white-space:no-wrap;
+  overflow:hidden;
+  text-align:center;
 }
 
 footer {
@@ -56,82 +57,76 @@ footer {
 }
 
 #header{
-   padding:10px;
-   height:20px;
-   position:fixed;
-   width:100%;
+  padding:10px;
+  height:20px;
+  position:fixed;
+  width:100%;
 }
 
 .my-navbar{
-    position: fixed !important;
-    top: 0;
-    position: absolute;
-    width: 100%;
-    /* Set the fixed height of the footer here */
-
+  position: fixed !important;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  /* Set the fixed height of the footer here */
 }
 .my-navbar-bg{
-    background-color: #0C1429;
-    height: 80px;
-    width: 100%;
-    position: absolute;
+  background-color: #0C1429;
+  height: 80px;
+  width: 100%;
+  position: absolute;
 }
 
 .my-navbar-img{
-    padding-bottom: 10px;
-    padding-left: 6%;
-    padding-top: 5px;
-    position: absolute;
-    z-index: 1;
-
+  padding-bottom: 10px;
+  padding-left: 6%;
+  padding-top: 5px;
+  position: absolute;
+  z-index: 1;
 }
 
 a:link {
-    color: white;
+  color: white;
 }
 
 /* visited link */
 a:visited {
-    color: white;
+  color: white;
 }
 
 /* mouse over link */
 a:hover {
-    color: white;
+  color: white;
 }
 
 /* selected link */
 a:active {
-    color: white;
+  color: white;
 }
 
 .my-navbar-text{
-    z-index: 2;
-    padding-right: 10%;
-    position: relative;
-    padding-top: 30px !important;
-    z-index: 1;
-    top: 0;
-    float:right;
-    color: #FFFFFF !important;
+  z-index: 2;
+  padding-right: 10%;
+  position: relative;
+  padding-top: 30px !important;
+  z-index: 1;
+  top: 0;
+  float:right;
+  color: #FFFFFF !important;
 }
 
-
-
 .index-title{
-
-    background-color:#0C1429 !important;
-    padding-bottom: 3px;
-    display: block;
-    font-size: 41px;
-    margin-top: 0.83em;
-    margin-bottom: 0.83em;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: lighter;
-    padding-top: 0px;
-    color: white;
-
+  background-color:#0C1429 !important;
+  padding-bottom: 3px;
+  display: block;
+  font-size: 41px;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: lighter;
+  padding-top: 0px;
+  color: white;
 }
 
 
