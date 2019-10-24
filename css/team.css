@@ -285,6 +285,7 @@ p {
   /* border-radius: 90%; */
   height: 205px;
   width: 173px;
+  object-fit: cover;
   /* padding: 5px; */
   opacity: 1;
   display: block;
